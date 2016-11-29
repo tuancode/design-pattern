@@ -1,6 +1,12 @@
 <?php
 class ShapeFactory
 {
+    /**
+     * Build a shape object
+     *
+     * @param  string $type Shape type
+     * @return object
+     */
     public static function build($type)
     {
         if ($type == null) {

@@ -4,24 +4,40 @@ class Iphone5 implements IIphone
     /**
      * @inheritdoc
      */
-    public function year()
+    public function cpu()
     {
-        echo 2012;
+        echo "Apple A6\n";
     }
-
+    
     /**
      * @inheritdoc
      */
-    public function stock()
+    public function memory()
     {
-        echo 10;
+        echo "1 GB\n";
     }
-
+    
     /**
      * @inheritdoc
      */
-    public function price()
+    public function battery()
     {
-        echo '$500';
+        echo "1434 mA\n";
+    }
+    
+    /**
+     * @inheritdoc
+     */
+    public function display()
+    {
+        echo "1136×640 px\n";
+    }
+    
+    /**
+     * @inheritdoc
+     */
+    public function color()
+    {
+        echo 'Black/White';
     }
 }

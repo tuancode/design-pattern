@@ -4,24 +4,40 @@ class Iphone4 implements IIphone
     /**
      * @inheritdoc
      */
-    public function year()
+    public function cpu()
     {
-        echo 2010;
+        echo "Apple A4\n";
     }
-
+    
     /**
      * @inheritdoc
      */
-    public function stock()
+    public function memory()
     {
-        echo 0;
+        echo "521 MB\n";
     }
-
+    
     /**
      * @inheritdoc
      */
-    public function price()
+    public function battery()
     {
-        echo '$330';
+        echo "1419 mA\n";
+    }
+    
+    /**
+     * @inheritdoc
+     */
+    public function display()
+    {
+        echo "320×480 px\n";
+    }
+    
+    /**
+     * @inheritdoc
+     */
+    public function color()
+    {
+        echo "Black/White";
     }
 }

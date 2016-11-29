@@ -2,17 +2,18 @@
 class AppleFactory
 {
     /**
-     * [produce description]
-     * @param  [type] $type [description]
-     * @return [type]       [description]
+     * Create an iPhone object
+     *
+     * @param  string $type iPhone type
+     * @return object
      */
-    public static function produce($type)
+    public static function make($type)
     {
         $className = ucwords($type);
         if (class_exists($className)) {
             return new $className;
         } else {
-            throw new Exception("iPhone type unavailable");
+            throw new Exception("$type is unavailable!\nWe can only procude iPhone 4, 5, 6, 7.");
         }
     }
 }

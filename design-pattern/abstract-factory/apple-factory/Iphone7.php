@@ -4,24 +4,40 @@ class Iphone7 implements IIphone
     /**
      * @inheritdoc
      */
-    public function year()
+    public function cpu()
     {
-        echo 2008;
+        echo "Apple A10\n";
     }
-
+    
     /**
      * @inheritdoc
      */
-    public function stock()
+    public function memory()
     {
-        echo 400;
+        echo "2 GB\n";
     }
-
+    
     /**
      * @inheritdoc
      */
-    public function price()
+    public function battery()
     {
-        echo '$800';
+        echo "1960 mA\n";
+    }
+    
+    /**
+     * @inheritdoc
+     */
+    public function display()
+    {
+        echo "1334×750 px\n";
+    }
+    
+    /**
+     * @inheritdoc
+     */
+    public function color()
+    {
+        echo 'Rose Gold, Gold, Silver, Black, or Jet Black';
     }
 }

@@ -2,23 +2,37 @@
 interface IIphone
 {
     /**
-     * Release year
-     * 
-     * @return integer Year
+     * CPU Specs
+     *
+     * @return string
      */
-    public function year();
-
+    public function cpu();
+    
     /**
-     * Stock of phone in warehouse
-     * 
-     * @return integer 
+     * RAM Specs
+     *
+     * @return string
      */
-    public function stock();
-
+    public function memory();
+    
     /**
-     * Product price
-     * 
-     * @return string Price
+     * Battery Specs
+     *
+     * @return string
      */
-    public function price();
+    public function battery();
+    
+    /**
+     * Screen Specs
+     *
+     * @return string
+     */
+    public function display();
+    
+    /**
+     * Color Specs
+     *
+     * @return string
+     */
+    public function color();
 }
