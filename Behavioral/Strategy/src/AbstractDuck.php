@@ -31,7 +31,7 @@ abstract class AbstractDuck
      */
     public function swim() : void
     {
-        echo 'I can swim.';
+        echo 'I am swimming.';
     }
 
     /**
