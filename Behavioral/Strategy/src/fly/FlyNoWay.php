@@ -1,6 +1,6 @@
 <?php
 
-namespace Strategy\src\fly;
+namespace DesignPattern\Behavioral\Strategy\src\fly;
 
 /**
  * FlyNoWay represent an inability to fly behavior.

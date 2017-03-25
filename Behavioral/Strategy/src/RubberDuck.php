@@ -1,9 +1,9 @@
 <?php
 
-namespace Strategy\src;
+namespace DesignPattern\Behavioral\Strategy\src;
 
-use Strategy\src\fly\FlyNoWay;
-use Strategy\src\quack\Squeak;
+use DesignPattern\Behavioral\Strategy\src\fly\FlyNoWay;
+use DesignPattern\Behavioral\Strategy\src\quack\Squeak;
 
 /**
  * RubberDuck can swim, squeak.

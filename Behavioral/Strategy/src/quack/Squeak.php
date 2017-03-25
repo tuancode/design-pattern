@@ -1,6 +1,6 @@
 <?php
 
-namespace Strategy\src\quack;
+namespace DesignPattern\Behavioral\Strategy\src\quack;
 
 /**
  * Squeak represent a different kind of quack.

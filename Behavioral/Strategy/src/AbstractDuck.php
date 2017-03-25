@@ -1,9 +1,9 @@
 <?php
 
-namespace Strategy\src;
+namespace DesignPattern\Behavioral\Strategy\src;
 
-use Strategy\src\FlyBehaviorInterface;
-use Strategy\src\quack\QuackBehaviorInterface;
+use DesignPattern\Behavioral\Strategy\src\fly\FlyBehaviorInterface;
+use DesignPattern\Behavioral\Strategy\src\quack\QuackBehaviorInterface;
 
 /**
  * A supper duck.
@@ -35,7 +35,7 @@ abstract class AbstractDuck
     }
 
     /**
-     * Common erform a fly behavior.
+     * Common perform a fly behavior.
      */
     public function performFly() : void
     {

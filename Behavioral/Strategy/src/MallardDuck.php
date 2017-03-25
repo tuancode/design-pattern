@@ -1,9 +1,9 @@
 <?php
 
-namespace Strategy\src;
+namespace DesignPattern\Behavioral\Strategy\src;
 
-use Strategy\src\fly\FlyWithWings;
-use Strategy\src\quack\Quack;
+use DesignPattern\Behavioral\Strategy\src\fly\FlyWithWings;
+use DesignPattern\Behavioral\Strategy\src\quack\Quack;
 
 /**
  * MallardDuck can swim, quack, fly.

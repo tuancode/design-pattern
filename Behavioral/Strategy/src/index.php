@@ -1,6 +1,6 @@
 <?php
 
-namespace Strategy\src;
+namespace DesignPattern\Behavioral\Strategy\src;
 
 $mallardDuck = new MallardDuck();
 $mallardDuck->display();

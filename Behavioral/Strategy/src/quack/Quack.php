@@ -1,6 +1,6 @@
 <?php
 
-namespace Strategy\src\quack;
+namespace DesignPattern\Behavioral\Strategy\src\quack;
 
 /**
  * Quack represent a real quack.

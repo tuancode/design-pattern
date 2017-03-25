@@ -1,0 +1,20 @@
+{
+    "name": "tuanvu/design-pattern",
+    "description": "Design Pattern is implemented by PHP",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Tuan Vu",
+            "email": "tuan.vu@dirox.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "DesignPattern\\": ""
+        }
+    }
+}

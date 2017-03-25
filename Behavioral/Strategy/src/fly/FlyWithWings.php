@@ -1,6 +1,6 @@
 <?php
 
-namespace Strategy\src\fly;
+namespace DesignPattern\Behavioral\Strategy\src\fly;
 
 /**
  * FlyWithWing represent a fly behavior with wings.
