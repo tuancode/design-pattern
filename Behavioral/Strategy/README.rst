@@ -8,4 +8,4 @@ UML Diagram
    :alt: Alt Strategy UML Diagram
    :align: center
 
-..__: http://en.wikipedia.org/wiki/Strategy_pattern
+.. __: http://en.wikipedia.org/wiki/Strategy_pattern
