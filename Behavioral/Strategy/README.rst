@@ -1,8 +1,8 @@
 `Strategy`__
 ============
 
-UML Diagram
------------
+Class Diagram
+-------------
 
 .. image:: uml/class-diagram.png
    :alt: Alt Strategy UML Diagram
