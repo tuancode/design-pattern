@@ -28,7 +28,7 @@ $rubberDuck->display(); echo "<br />";
 $rubberDuck->swim(); echo "<br />";
 $rubberDuck->performFly(); echo "<br />";
 $rubberDuck->performQuack(); echo "<br />";
-// Change behavior at runtime. A big advantage of "Favor composition over inheritance" principle
-// Has-a relation can help us easily change it at runtime.
+// Change fly behavior at runtime. A big advantage of "Favor composition over inheritance" principle
+// Has-a relation give us a flexible way to change behavior at runtime.
 $rubberDuck->setFlyBehavior(new FlyRocketPowered());
 $rubberDuck->performFly(); echo "<br />";
