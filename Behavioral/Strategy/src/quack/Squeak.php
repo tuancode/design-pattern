@@ -11,8 +11,8 @@ class Squeak implements QuackBehaviorInterface
     /**
      * {@inheritdoc}
      */
-    public function quack(): void
+    public function quack(): string
     {
-        echo 'Squeak...squeak...squeak!';
+        return 'Squeak...squeak...squeak!';
     }
 }

@@ -10,8 +10,8 @@ class FlyWithWings implements FlyBehaviorInterface
     /**
      * {@inheritdoc}
      */
-    public function fly(): void
+    public function fly(): string
     {
-        echo 'I am flying!';
+        return 'I am flying!';
     }
 }

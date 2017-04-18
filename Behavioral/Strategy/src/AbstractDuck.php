@@ -23,31 +23,39 @@ abstract class AbstractDuck
 
     /**
      * Display a kind of duck.
+     *
+     * @return string
      */
-    abstract public function display() : void;
+    abstract public function display(): string;
 
     /**
      * Present how a duck swim.
+     *
+     * @return string
      */
-    public function swim() : void
+    public function swim(): string
     {
-        echo 'I am swimming.';
+        return 'I am swimming.';
     }
 
     /**
      * Common perform a fly behavior.
+     *
+     * @return string
      */
-    public function performFly() : void
+    public function performFly() : string
     {
-        $this->flyBehavior->fly();
+        return $this->flyBehavior->fly();
     }
 
     /**
      * Common perform a quack behavior.
+     *
+     * @return string
      */
-    public function performQuack() : void
+    public function performQuack() : string
     {
-        $this->quackBehavior->quack();
+        return $this->quackBehavior->quack();
     }
 
     /**
@@ -55,9 +63,9 @@ abstract class AbstractDuck
      *
      * @param FlyBehaviorInterface $flyBehavior
      *
-     * @return self
+     * @return AbstractDuck
      */
-    public function setFlyBehavior(FlyBehaviorInterface $flyBehavior) : self
+    public function setFlyBehavior(FlyBehaviorInterface $flyBehavior) : AbstractDuck
     {
         $this->flyBehavior = $flyBehavior;
 
@@ -69,9 +77,9 @@ abstract class AbstractDuck
      *
      * @param QuackBehaviorInterface $quackBehavior
      *
-     * @return self
+     * @return AbstractDuck
      */
-    public function setQuackBehavior(QuackBehaviorInterface $quackBehavior) : self
+    public function setQuackBehavior(QuackBehaviorInterface $quackBehavior) : AbstractDuck
     {
         $this->quackBehavior = $quackBehavior;
 

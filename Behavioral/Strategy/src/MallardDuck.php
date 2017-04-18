@@ -22,8 +22,8 @@ class MallardDuck extends AbstractDuck
     /**
      * {@inheritdoc}
      */
-    public function display(): void
+    public function display(): string
     {
-        echo 'I am Mallard Duck.';
+        return 'I am Mallard Duck.';
     }
 }

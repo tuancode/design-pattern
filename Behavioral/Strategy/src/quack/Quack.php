@@ -10,8 +10,8 @@ class Quack implements QuackBehaviorInterface
     /**
      * {@inheritdoc}
      */
-    public function quack(): void
+    public function quack(): string
     {
-        echo 'Quack...quack...quack!';
+        return 'Quack...quack...quack!';
     }
 }

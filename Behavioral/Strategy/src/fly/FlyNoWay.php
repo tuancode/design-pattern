@@ -10,8 +10,8 @@ class FlyNoWay implements FlyBehaviorInterface
     /**
      * {@inheritdoc}
      */
-    public function fly(): void
+    public function fly(): string
     {
-        echo 'I cannot fly!';
+        return 'I cannot fly!';
     }
 }

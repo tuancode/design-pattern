@@ -10,8 +10,8 @@ class FlyRocketPowered implements FlyBehaviorInterface
     /**
      * {@inheritdoc}
      */
-    public function fly(): void
+    public function fly(): string
     {
-        echo 'Woo-hoo! I am flying with a rocket.';
+        return 'Woo-hoo! I am flying with a rocket.';
     }
 }

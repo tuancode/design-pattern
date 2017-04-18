@@ -23,8 +23,8 @@ class RubberDuck extends AbstractDuck
     /**
      * {@inheritdoc}
      */
-    public function display(): void
+    public function display(): string
     {
-        echo 'I am Rubber Duck.';
+        return 'I am Rubber Duck.';
     }
 }

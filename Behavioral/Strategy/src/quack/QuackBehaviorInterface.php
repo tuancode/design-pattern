@@ -10,5 +10,5 @@ interface QuackBehaviorInterface
     /**
      * Present a quack behavior.
      */
-    public function quack() : void;
+    public function quack(): string;
 }

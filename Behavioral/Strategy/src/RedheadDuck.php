@@ -22,8 +22,8 @@ class RedheadDuck extends AbstractDuck
     /**
      * {@inheritdoc}
      */
-    public function display(): void
+    public function display(): string
     {
-        echo 'I am Redhead Duck.';
+        return 'I am Redhead Duck.';
     }
 }

@@ -10,8 +10,8 @@ class MuteQuack implements QuackBehaviorInterface
     /**
      * {@inheritdoc}
      */
-    public function quack(): void
+    public function quack(): string
     {
-        echo 'I cannot quack!';
+        return 'I cannot quack!';
     }
 }
