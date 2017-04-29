@@ -13,7 +13,7 @@ class RedheadDuckTest extends TestCase implements DuckTestInterface
     const EXPECTED_DISPLAY = 'I am Redhead Duck.';
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function testDisplay()
     {
@@ -22,7 +22,7 @@ class RedheadDuckTest extends TestCase implements DuckTestInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function testSwim()
     {
@@ -31,7 +31,7 @@ class RedheadDuckTest extends TestCase implements DuckTestInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function testFly()
     {
@@ -40,7 +40,7 @@ class RedheadDuckTest extends TestCase implements DuckTestInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function testQuack()
     {

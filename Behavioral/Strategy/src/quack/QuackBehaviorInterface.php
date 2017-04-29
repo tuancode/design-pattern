@@ -3,7 +3,7 @@
 namespace DesignPattern\Behavioral\Strategy\src\quack;
 
 /**
- * Interface QuackBehaviorInterface
+ * Interface QuackBehaviorInterface.
  */
 interface QuackBehaviorInterface
 {

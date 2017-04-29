@@ -20,7 +20,6 @@ abstract class AbstractDuck
      */
     protected $quackBehavior;
 
-
     /**
      * Display a kind of duck.
      *
@@ -43,7 +42,7 @@ abstract class AbstractDuck
      *
      * @return string
      */
-    public function performFly() : string
+    public function performFly(): string
     {
         return $this->flyBehavior->fly();
     }
@@ -53,7 +52,7 @@ abstract class AbstractDuck
      *
      * @return string
      */
-    public function performQuack() : string
+    public function performQuack(): string
     {
         return $this->quackBehavior->quack();
     }
@@ -65,7 +64,7 @@ abstract class AbstractDuck
      *
      * @return AbstractDuck
      */
-    public function setFlyBehavior(FlyBehaviorInterface $flyBehavior) : AbstractDuck
+    public function setFlyBehavior(FlyBehaviorInterface $flyBehavior): AbstractDuck
     {
         $this->flyBehavior = $flyBehavior;
 
@@ -79,7 +78,7 @@ abstract class AbstractDuck
      *
      * @return AbstractDuck
      */
-    public function setQuackBehavior(QuackBehaviorInterface $quackBehavior) : AbstractDuck
+    public function setQuackBehavior(QuackBehaviorInterface $quackBehavior): AbstractDuck
     {
         $this->quackBehavior = $quackBehavior;
 

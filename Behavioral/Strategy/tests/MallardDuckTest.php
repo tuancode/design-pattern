@@ -13,7 +13,7 @@ class MallardDuckTest extends TestCase implements DuckTestInterface
     const EXPECTED_DISPLAY = 'I am Mallard Duck.';
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function testDisplay()
     {
@@ -22,7 +22,7 @@ class MallardDuckTest extends TestCase implements DuckTestInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function testSwim()
     {
@@ -31,7 +31,7 @@ class MallardDuckTest extends TestCase implements DuckTestInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function testFly()
     {
@@ -40,7 +40,7 @@ class MallardDuckTest extends TestCase implements DuckTestInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function testQuack()
     {
