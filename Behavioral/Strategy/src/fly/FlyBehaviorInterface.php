@@ -3,7 +3,7 @@
 namespace DesignPattern\Behavioral\Strategy\src\fly;
 
 /**
- * Interface FlyBehaviorInterface
+ * Interface FlyBehaviorInterface.
  */
 interface FlyBehaviorInterface
 {
