@@ -7,14 +7,29 @@
          failOnRisky="true"
          failOnWarning="true"
 >
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="intl.default_locale" value="en"/>
+        <ini name="intl.error_level" value="0"/>
+        <ini name="memory_limit" value="-1"/>
+        <env name="DUMP_LIGHT_ARRAY" value=""/>
+        <env name="DUMP_STRING_LENGTH" value=""/>
+    </php>
+
     <testsuites>
-        <testsuite name="DesignPattern">
-            <directory suffix="Test.php">Behavioral/*/tests</directory>
+        <testsuite name="DesignPattern Test Suite">
+            <directory suffix="Test.php">./Behavioral/*/tests</directory>
         </testsuite>
     </testsuites>
     <filter>
         <blacklist>
             <directory>./vendor</directory>
         </blacklist>
+        <whitelist>
+            <directory suffix=".php">./Behavioral</directory>
+            <exclude>
+                <directory>./Behavioral/*/tests</directory>
+            </exclude>
+        </whitelist>
     </filter>
 </phpunit>
