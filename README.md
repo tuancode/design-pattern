@@ -1,7 +1,7 @@
 # Design pattern
-Design patterns guideline by model and sample code.
+Design pattern sample code.
 ## Why do I use this repository?
-Explain the ideas of pattern by Mind Map.  
+Explain the ideas of sample by Mind Map.  
 Represent implemented code by UML.  
 Sample code is mainly in PHP language.
 ## Who gets benefit from this repository?
