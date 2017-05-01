@@ -2,17 +2,17 @@
 
 namespace DesignPattern\Behavioral\Strategy\Tests\Unit\Quack;
 
-use DesignPattern\Behavioral\Strategy\Src\Quack\MuteQuack;
+use DesignPattern\Behavioral\Strategy\Src\Quack\QuackMute;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MuteQuack unit test class.
+ * QuackMute unit test class.
  */
-class MuteQuackTest extends TestCase
+class QuackMuteTest extends TestCase
 {
     public function testQuack()
     {
-        $quackBehavior = new MuteQuack();
+        $quackBehavior = new QuackMute();
         $this->assertEquals('I cannot quack!', $quackBehavior->quack());
     }
 }

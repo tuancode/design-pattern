@@ -4,6 +4,7 @@ namespace DesignPattern\Behavioral\Strategy\Tests\Functional;
 
 use DesignPattern\Behavioral\Strategy\Src\Fly\FlyRocketPowered;
 use DesignPattern\Behavioral\Strategy\Src\MallardDuck;
+use DesignPattern\Behavioral\Strategy\Src\Quack\QuackMute;
 use DesignPattern\Behavioral\Strategy\Src\RedheadDuck;
 use DesignPattern\Behavioral\Strategy\Src\RubberDuck;
 use PHPUnit\Framework\TestCase;
@@ -40,11 +41,13 @@ class StrategyTest extends TestCase
     /**
      * Test RubberDuck can display, swim, squeak instead of quack.
      * Test RubberDuck cannot fly.
-     * Test add fly behavior to help RubberDuck can fly.
+     * Test add a rocker powered to help RubberDuck can fly.
+     * Test remove RubberDuck squeak ability.
      */
     public function testRubberDuck()
     {
         $rubberDuck = new RubberDuck();
+
         // RubberDuck can display, swim and squeak.
         $this->assertEquals('I am Rubber Duck.', $rubberDuck->display());
         $this->assertEquals('I am swimming.', $rubberDuck->swim());
@@ -54,9 +57,11 @@ class StrategyTest extends TestCase
         $this->assertEquals('I cannot fly!', $rubberDuck->performFly());
 
         // Add a rocket powered to help the duck can fly.
-        // Note the fly behavior changed at runtime. A big advantage of "Favor composition over inheritance" principle.
-        // Has-a relation give us a flexible way to change behavior at runtime.
         $rubberDuck->setFlyBehavior(new FlyRocketPowered());
         $this->assertEquals('Woo-hoo! I am flying with a rocket.', $rubberDuck->performFly());
+
+        // Add a quack mute to remove RubberDuck squeak ability
+        $rubberDuck->setQuackBehavior(new QuackMute());
+        $this->assertEquals('I cannot quack!', $rubberDuck->performQuack());
     }
 }

@@ -3,9 +3,9 @@
 namespace DesignPattern\Behavioral\Strategy\Src\Quack;
 
 /**
- * MuteQuack represent an inability to Quack behavior.
+ * QuackMute represent an inability to Quack behavior.
  */
-class MuteQuack implements QuackBehaviorInterface
+class QuackMute implements QuackBehaviorInterface
 {
     /**
      * {@inheritdoc}

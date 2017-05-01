@@ -28,7 +28,7 @@
         <whitelist>
             <directory suffix=".php">./Behavioral</directory>
             <exclude>
-                <directory>./Behavioral/*/tests</directory>
+                <directory>./Behavioral/*/Tests</directory>
             </exclude>
         </whitelist>
     </filter>
