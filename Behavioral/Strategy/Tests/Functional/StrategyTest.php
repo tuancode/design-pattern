@@ -41,8 +41,8 @@ class StrategyTest extends TestCase
     /**
      * Test RubberDuck can display, swim, squeak instead of quack.
      * Test RubberDuck cannot fly.
-     * Test add a rocker powered to help RubberDuck can fly.
-     * Test remove RubberDuck squeak ability.
+     * Test add rocker powered to help RubberDuck can fly.
+     * Test add quack mute to remove RubberDuck quack ability.
      */
     public function testRubberDuck()
     {
@@ -53,14 +53,14 @@ class StrategyTest extends TestCase
         $this->assertEquals('I am swimming.', $rubberDuck->swim());
         $this->assertEquals('Squeak...squeak...squeak!', $rubberDuck->performQuack());
 
-        // But it cannot fly
+        // But it cannot fly.
         $this->assertEquals('I cannot fly!', $rubberDuck->performFly());
 
         // Add a rocket powered to help the duck can fly.
         $rubberDuck->setFlyBehavior(new FlyRocketPowered());
         $this->assertEquals('Woo-hoo! I am flying with a rocket.', $rubberDuck->performFly());
 
-        // Add a quack mute to remove RubberDuck squeak ability
+        // Add a quack mute to remove RubberDuck quack ability.
         $rubberDuck->setQuackBehavior(new QuackMute());
         $this->assertEquals('I cannot quack!', $rubberDuck->performQuack());
     }
