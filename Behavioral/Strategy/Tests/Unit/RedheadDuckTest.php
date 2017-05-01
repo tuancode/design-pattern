@@ -6,45 +6,31 @@ use DesignPattern\Behavioral\Strategy\Src\RedheadDuck;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test RedheadDuck can swim, Quack, fly.
+ * RedheadDuck unit test class.
  */
-class RedheadDuckTest extends TestCase implements DuckTestInterface
+class RedheadDuckTest extends TestCase
 {
-    const EXPECTED_DISPLAY = 'I am Redhead Duck.';
-
-    /**
-     * {@inheritdoc}
-     */
-    public function testDisplay()
+    public function testDisplaySuccess()
     {
         $redheadDuck = new RedheadDuck();
-        $this->assertEquals(self::EXPECTED_DISPLAY, $redheadDuck->display());
+        $this->assertEquals('I am Redhead Duck.', $redheadDuck->display());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testSwim()
+    public function testSwimSuccess()
     {
         $redheadDuck = new RedheadDuck();
-        $this->assertEquals(self::EXPECTED_SWIM, $redheadDuck->swim());
+        $this->assertEquals('I am swimming.', $redheadDuck->swim());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testFly()
+    public function testPerformQuackSuccess()
     {
         $redheadDuck = new RedheadDuck();
-        $this->assertEquals(self::EXPECTED_FLY, $redheadDuck->performFly());
+        $this->assertEquals('Quack...quack...quack!', $redheadDuck->performQuack());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testQuack()
+    public function testPerformFlyWithWings()
     {
         $redheadDuck = new RedheadDuck();
-        $this->assertEquals(self::EXPECTED_QUACK, $redheadDuck->performQuack());
+        $this->assertEquals('I am flying.', $redheadDuck->performFly());
     }
 }

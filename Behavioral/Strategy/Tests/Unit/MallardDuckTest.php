@@ -6,45 +6,31 @@ use DesignPattern\Behavioral\Strategy\Src\MallardDuck;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test MallardDuck can swim, Quack, fly.
+ * MallardDuck unit test class.
  */
-class MallardDuckTest extends TestCase implements DuckTestInterface
+class MallardDuckTest extends TestCase
 {
-    const EXPECTED_DISPLAY = 'I am Mallard Duck.';
-
-    /**
-     * {@inheritdoc}
-     */
-    public function testDisplay()
+    public function testDisplaySuccess()
     {
         $mallardDuck = new MallardDuck();
-        $this->assertEquals(self::EXPECTED_DISPLAY, $mallardDuck->display());
+        $this->assertEquals('I am Mallard Duck.', $mallardDuck->display());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testSwim()
+    public function testSwimSuccess()
     {
         $mallardDuck = new MallardDuck();
-        $this->assertEquals(self::EXPECTED_SWIM, $mallardDuck->swim());
+        $this->assertEquals('I am swimming.', $mallardDuck->swim());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testFly()
+    public function testPerformQuackSuccess()
     {
         $mallardDuck = new MallardDuck();
-        $this->assertEquals(self::EXPECTED_FLY, $mallardDuck->performFly());
+        $this->assertEquals('Quack...quack...quack!', $mallardDuck->performQuack());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testQuack()
+    public function testPerformFlyWithWings()
     {
         $mallardDuck = new MallardDuck();
-        $this->assertEquals(self::EXPECTED_QUACK, $mallardDuck->performQuack());
+        $this->assertEquals('I am flying.', $mallardDuck->performFly());
     }
 }

@@ -6,13 +6,10 @@ use DesignPattern\Behavioral\Strategy\Src\Quack\Quack;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class QuackTest.
+ * Quack unit test class.
  */
 class QuackTest extends TestCase
 {
-    /**
-     * Test Quack action.
-     */
     public function testQuack()
     {
         $quackBehavior = new Quack();

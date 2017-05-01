@@ -11,7 +11,7 @@ use DesignPattern\Behavioral\Strategy\Src\Quack\Quack;
 class RedheadDuck extends AbstractDuck
 {
     /**
-     * Init fly and Quack behavior.
+     * Init fly and quack behavior.
      */
     public function __construct()
     {

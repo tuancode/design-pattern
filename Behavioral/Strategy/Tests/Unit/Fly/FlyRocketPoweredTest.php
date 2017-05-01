@@ -6,13 +6,10 @@ use DesignPattern\Behavioral\Strategy\Src\Fly\FlyRocketPowered;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class FlyRocketPowered.
+ * FlyRocketPowered uni test class.
  */
 class FlyRocketPoweredTest extends TestCase
 {
-    /**
-     * Test fly action.
-     */
     public function testFly()
     {
         $flyBehavior = new FlyRocketPowered();

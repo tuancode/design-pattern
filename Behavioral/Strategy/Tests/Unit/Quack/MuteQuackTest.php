@@ -6,13 +6,10 @@ use DesignPattern\Behavioral\Strategy\Src\Quack\MuteQuack;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class MuckQuackTest.
+ * MuteQuack unit test class.
  */
 class MuteQuackTest extends TestCase
 {
-    /**
-     * Test Quack action.
-     */
     public function testQuack()
     {
         $quackBehavior = new MuteQuack();

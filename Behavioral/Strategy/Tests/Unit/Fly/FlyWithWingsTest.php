@@ -6,13 +6,10 @@ use DesignPattern\Behavioral\Strategy\Src\Fly\FlyWithWings;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class FlyWithWings.
+ * FlyWithWings unit test class.
  */
 class FlyWithWingsTest extends TestCase
 {
-    /**
-     * Test fly action.
-     */
     public function testFly()
     {
         $flyBehavior = new FlyWithWings();

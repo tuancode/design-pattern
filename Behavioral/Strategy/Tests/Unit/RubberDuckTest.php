@@ -6,45 +6,31 @@ use DesignPattern\Behavioral\Strategy\Src\RubberDuck;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test RubberDuck can swim, squeak, but cannot Quack and fly.
+ * RubberDuck unit test class.
  */
-class RubberDuckTest extends TestCase implements DuckTestInterface
+class RubberDuckTest extends TestCase
 {
-    const EXPECTED_DISPLAY = 'I am Rubber Duck.';
-
-    /**
-     * {@inheritdoc}
-     */
-    public function testDisplay()
+    public function testDisplaySuccess()
     {
         $rubberDuck = new RubberDuck();
-        $this->assertEquals(self::EXPECTED_DISPLAY, $rubberDuck->display());
+        $this->assertEquals('I am Rubber Duck.', $rubberDuck->display());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testSwim()
+    public function testSwimSuccess()
     {
         $rubberDuck = new RubberDuck();
-        $this->assertEquals(self::EXPECTED_SWIM, $rubberDuck->swim());
+        $this->assertEquals('I am swimming.', $rubberDuck->swim());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testFly()
+    public function testPerformQuackAsSqueak()
     {
         $rubberDuck = new RubberDuck();
-        $this->assertEquals(self::EXPECTED_FLY_NO_WAY, $rubberDuck->performFly());
+        $this->assertEquals('Squeak...squeak...squeak!', $rubberDuck->performQuack());
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function testQuack()
+    public function testPerformFlyNoWay()
     {
         $rubberDuck = new RubberDuck();
-        $this->assertEquals(self::EXPECTED_QUACK_SQUEAK, $rubberDuck->performQuack());
+        $this->assertEquals('I cannot fly!', $rubberDuck->performFly());
     }
 }
