@@ -1,18 +1,18 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src;
+namespace DesignPattern\Behavioral\Strategy\Src;
 
-use DesignPattern\Behavioral\Strategy\src\fly\FlyNoWay;
-use DesignPattern\Behavioral\Strategy\src\quack\Squeak;
+use DesignPattern\Behavioral\Strategy\Src\Fly\FlyNoWay;
+use DesignPattern\Behavioral\Strategy\Src\Quack\Squeak;
 
 /**
  * RubberDuck can swim, squeak.
- * It cannot quack, fly.
+ * It cannot Quack, fly.
  */
 class RubberDuck extends AbstractDuck
 {
     /**
-     * Init fly and quack behavior.
+     * Init fly and Quack behavior.
      */
     public function __construct()
     {

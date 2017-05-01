@@ -4,7 +4,7 @@
 Class Diagram
 -------------
 
-.. image:: uml/class-diagram.png
+.. image:: Uml/ClassDiagram.png
    :alt: Alt Strategy UML Diagram
    :align: center
 

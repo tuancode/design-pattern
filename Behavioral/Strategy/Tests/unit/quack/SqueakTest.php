@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src\test\quack;
+namespace DesignPattern\Behavioral\Strategy\Tests\Unit\Quack;
 
-use DesignPattern\Behavioral\Strategy\src\quack\Squeak;
+use DesignPattern\Behavioral\Strategy\Src\Quack\Squeak;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 class SqueakTest extends TestCase
 {
     /**
-     * Test quack action.
+     * Test Quack action.
      */
     public function testQuack()
     {
