@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\tests\fly;
+namespace DesignPattern\Behavioral\Strategy\Tests\Unit\Fly;
 
-use DesignPattern\Behavioral\Strategy\src\fly\FlyNoWay;
+use DesignPattern\Behavioral\Strategy\Src\Fly\FlyNoWay;
 use PHPUnit\Framework\TestCase;
 
 /**

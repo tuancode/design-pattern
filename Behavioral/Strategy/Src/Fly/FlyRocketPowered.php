@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src\fly;
+namespace DesignPattern\Behavioral\Strategy\Src\Fly;
 
 /**
  * FlyRocketPowered represent an ability to fly by using rocket powered.

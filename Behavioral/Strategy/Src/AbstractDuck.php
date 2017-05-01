@@ -1,9 +1,9 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src;
+namespace DesignPattern\Behavioral\Strategy\Src;
 
-use DesignPattern\Behavioral\Strategy\src\fly\FlyBehaviorInterface;
-use DesignPattern\Behavioral\Strategy\src\quack\QuackBehaviorInterface;
+use DesignPattern\Behavioral\Strategy\Src\Fly\FlyBehaviorInterface;
+use DesignPattern\Behavioral\Strategy\Src\Quack\QuackBehaviorInterface;
 
 /**
  * A supper duck.
@@ -48,7 +48,7 @@ abstract class AbstractDuck
     }
 
     /**
-     * Common perform a quack behavior.
+     * Common perform a Quack behavior.
      *
      * @return string
      */
@@ -72,7 +72,7 @@ abstract class AbstractDuck
     }
 
     /**
-     * Optional sets a quack behavior.
+     * Optional sets a Quack behavior.
      *
      * @param QuackBehaviorInterface $quackBehavior
      *

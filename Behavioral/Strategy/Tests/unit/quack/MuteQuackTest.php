@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\tests\quack;
+namespace DesignPattern\Behavioral\Strategy\Tests\Unit\Quack;
 
-use DesignPattern\Behavioral\Strategy\src\quack\MuteQuack;
+use DesignPattern\Behavioral\Strategy\Src\Quack\MuteQuack;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 class MuteQuackTest extends TestCase
 {
     /**
-     * Test quack action.
+     * Test Quack action.
      */
     public function testQuack()
     {

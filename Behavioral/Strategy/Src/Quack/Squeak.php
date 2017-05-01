@@ -1,10 +1,10 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src\quack;
+namespace DesignPattern\Behavioral\Strategy\Src\Quack;
 
 /**
- * Squeak represent a different kind of quack.
- * For Ex. A rubber duck cannot quack, but squeak.
+ * Squeak represent a different kind of Quack.
+ * For Ex. A rubber duck cannot Quack, but squeak.
  */
 class Squeak implements QuackBehaviorInterface
 {

@@ -2,7 +2,7 @@
 
 namespace DesignPattern\Behavioral\Strategy\tests\fly;
 
-use DesignPattern\Behavioral\Strategy\src\fly\FlyWithWings;
+use DesignPattern\Behavioral\Strategy\Src\Fly\FlyWithWings;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -16,6 +16,6 @@ class FlyWithWingsTest extends TestCase
     public function testFly()
     {
         $flyBehavior = new FlyWithWings();
-        $this->assertEquals('I am flying!', $flyBehavior->fly());
+        $this->assertEquals('I am flying.', $flyBehavior->fly());
     }
 }

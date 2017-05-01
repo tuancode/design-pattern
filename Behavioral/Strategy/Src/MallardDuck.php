@@ -1,17 +1,17 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src;
+namespace DesignPattern\Behavioral\Strategy\Src;
 
-use DesignPattern\Behavioral\Strategy\src\fly\FlyWithWings;
-use DesignPattern\Behavioral\Strategy\src\quack\Quack;
+use DesignPattern\Behavioral\Strategy\Src\Fly\FlyWithWings;
+use DesignPattern\Behavioral\Strategy\Src\Quack\Quack;
 
 /**
- * MallardDuck can swim, quack, fly.
+ * MallardDuck can swim, Quack, fly.
  */
 class MallardDuck extends AbstractDuck
 {
     /**
-     * Init fly and quack behavior.
+     * Init fly and Quack behavior.
      */
     public function __construct()
     {

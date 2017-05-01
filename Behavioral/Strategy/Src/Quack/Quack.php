@@ -1,9 +1,9 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src\quack;
+namespace DesignPattern\Behavioral\Strategy\Src\Quack;
 
 /**
- * Quack represent a real quack.
+ * Quack represent a real Quack.
  */
 class Quack implements QuackBehaviorInterface
 {

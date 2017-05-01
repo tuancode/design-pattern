@@ -1,12 +1,12 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\tests;
+namespace DesignPattern\Behavioral\Strategy\Tests\Unit;
 
-use DesignPattern\Behavioral\Strategy\src\RedheadDuck;
+use DesignPattern\Behavioral\Strategy\Src\RedheadDuck;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test RedheadDuck can swim, quack, fly.
+ * Test RedheadDuck can swim, Quack, fly.
  */
 class RedheadDuckTest extends TestCase implements DuckTestInterface
 {

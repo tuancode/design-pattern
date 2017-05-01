@@ -1,12 +1,12 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\tests;
+namespace DesignPattern\Behavioral\Strategy\Tests\Unit;
 
-use DesignPattern\Behavioral\Strategy\src\RubberDuck;
+use DesignPattern\Behavioral\Strategy\Src\RubberDuck;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test RubberDuck can swim, squeak, but cannot quack and fly.
+ * Test RubberDuck can swim, squeak, but cannot Quack and fly.
  */
 class RubberDuckTest extends TestCase implements DuckTestInterface
 {

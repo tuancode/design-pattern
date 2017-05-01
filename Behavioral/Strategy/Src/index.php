@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src;
+namespace DesignPattern\Behavioral\Strategy\Src;
 
-use DesignPattern\Behavioral\Strategy\src\fly\FlyRocketPowered;
+use DesignPattern\Behavioral\Strategy\Src\Fly\FlyRocketPowered;
 
 require_once __DIR__.'/../../../vendor/autoload.php';
 
@@ -42,6 +42,6 @@ echo $rubberDuck->performQuack();
 echo '<br />';
 // Change fly behavior at runtime. A big advantage of "Favor composition over inheritance" principle
 // Has-a relation give us a flexible way to change behavior at runtime.
-echo $rubberDuck->setFlyBehavior(new FlyRocketPowered());
+$rubberDuck->setFlyBehavior(new FlyRocketPowered());
 echo $rubberDuck->performFly();
 echo '<br />';

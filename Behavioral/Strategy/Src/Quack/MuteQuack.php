@@ -1,9 +1,9 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src\quack;
+namespace DesignPattern\Behavioral\Strategy\Src\Quack;
 
 /**
- * MuteQuack represent an inability to quack behavior.
+ * MuteQuack represent an inability to Quack behavior.
  */
 class MuteQuack implements QuackBehaviorInterface
 {

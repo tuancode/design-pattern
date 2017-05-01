@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src\fly;
+namespace DesignPattern\Behavioral\Strategy\Src\Fly;
 
 /**
  * FlyWithWing represent a fly behavior with wings.
@@ -12,6 +12,6 @@ class FlyWithWings implements FlyBehaviorInterface
      */
     public function fly(): string
     {
-        return 'I am flying!';
+        return 'I am flying.';
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\tests\fly;
+namespace DesignPattern\Behavioral\Strategy\Tests\Unit\Fly;
 
-use DesignPattern\Behavioral\Strategy\src\fly\FlyRocketPowered;
+use DesignPattern\Behavioral\Strategy\Src\Fly\FlyRocketPowered;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPattern\Behavioral\Strategy\src\quack;
+namespace DesignPattern\Behavioral\Strategy\Src\Quack;
 
 /**
  * Interface QuackBehaviorInterface.
@@ -8,7 +8,7 @@ namespace DesignPattern\Behavioral\Strategy\src\quack;
 interface QuackBehaviorInterface
 {
     /**
-     * Present a quack behavior.
+     * Present a Quack behavior.
      */
     public function quack(): string;
 }
