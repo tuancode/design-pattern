@@ -22,13 +22,13 @@ class RedheadDuckTest extends TestCase
         $this->assertEquals('I am swimming.', $redheadDuck->swim());
     }
 
-    public function testPerformQuackSuccess()
+    public function testPerformQuackToQuack()
     {
         $redheadDuck = new RedheadDuck();
         $this->assertEquals('Quack...quack...quack!', $redheadDuck->performQuack());
     }
 
-    public function testPerformFlyWithWings()
+    public function testPerformFlyToFlyWithWings()
     {
         $redheadDuck = new RedheadDuck();
         $this->assertEquals('I am flying.', $redheadDuck->performFly());

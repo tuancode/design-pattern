@@ -4,7 +4,7 @@ namespace DesignPattern\Behavioral\Strategy\Tests\Functional;
 
 use DesignPattern\Behavioral\Strategy\Src\Fly\FlyRocketPowered;
 use DesignPattern\Behavioral\Strategy\Src\MallardDuck;
-use DesignPattern\Behavioral\Strategy\Src\Quack\QuackMute;
+use DesignPattern\Behavioral\Strategy\Src\Quack\MuteQuack;
 use DesignPattern\Behavioral\Strategy\Src\RedheadDuck;
 use DesignPattern\Behavioral\Strategy\Src\RubberDuck;
 use PHPUnit\Framework\TestCase;
@@ -53,7 +53,7 @@ class StrategyTest extends TestCase
         $rubberDuck->setFlyBehavior(new FlyRocketPowered());
         $this->assertEquals('Woo-hoo! I am flying with a rocket.', $rubberDuck->performFly());
 
-        $rubberDuck->setQuackBehavior(new QuackMute());
+        $rubberDuck->setQuackBehavior(new MuteQuack());
         $this->assertEquals('I cannot quack!', $rubberDuck->performQuack());
     }
 }
