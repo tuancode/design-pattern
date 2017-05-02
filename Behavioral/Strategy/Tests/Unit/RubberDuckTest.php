@@ -2,6 +2,8 @@
 
 namespace DesignPattern\Behavioral\Strategy\Tests\Unit;
 
+use DesignPattern\Behavioral\Strategy\Src\Fly\FlyRocketPowered;
+use DesignPattern\Behavioral\Strategy\Src\Quack\QuackMute;
 use DesignPattern\Behavioral\Strategy\Src\RubberDuck;
 use PHPUnit\Framework\TestCase;
 
@@ -28,9 +30,25 @@ class RubberDuckTest extends TestCase
         $this->assertEquals('Squeak...squeak...squeak!', $rubberDuck->performQuack());
     }
 
+    public function testPerformQuackMute()
+    {
+        $rubberDuck = new RubberDuck();
+        $rubberDuck->setQuackBehavior(new QuackMute());
+
+        $this->assertEquals('I cannot quack!', $rubberDuck->performQuack());
+    }
+
     public function testPerformFlyNoWay()
     {
         $rubberDuck = new RubberDuck();
         $this->assertEquals('I cannot fly!', $rubberDuck->performFly());
+    }
+
+    public function testPerformFlyRocketPowered()
+    {
+        $rubberDuck = new RubberDuck();
+        $rubberDuck->setFlyBehavior(new FlyRocketPowered());
+
+        $this->assertEquals('Woo-hoo! I am flying with a rocket.', $rubberDuck->performFly());
     }
 }
