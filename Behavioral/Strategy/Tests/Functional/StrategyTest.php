@@ -5,7 +5,7 @@ namespace DesignPattern\Behavioral\Strategy\Tests\Functional;
 use DesignPattern\Behavioral\Strategy\Src\Fly\FlyRocketPowered;
 use DesignPattern\Behavioral\Strategy\Src\MallardDuck;
 use DesignPattern\Behavioral\Strategy\Src\Quack\MuteQuack;
-use DesignPattern\Behavioral\Strategy\Src\RedheadDuck;
+use DesignPattern\Behavioral\Strategy\Src\DecoyDuck;
 use DesignPattern\Behavioral\Strategy\Src\RubberDuck;
 use PHPUnit\Framework\TestCase;
 
@@ -15,8 +15,8 @@ use PHPUnit\Framework\TestCase;
 class StrategyTest extends TestCase
 {
     /**
-     * Test MallardDuck can display, swim, quack, fly.
-     * Test RedheadDuck can display, swim, quack, fly.
+     * Test MallardDuck can display, swim, fly, quack.
+     * Test DecoyDuck can display, swim, but cannot fly and quack.
      * Test RubberDuck can display, swim, squeak, but cannot fly.
      */
     public function testObjectCanBeConfiguredWithDifferentAlgorithm()
@@ -24,20 +24,20 @@ class StrategyTest extends TestCase
         $mallardDuck = new MallardDuck();
         $this->assertEquals('I am Mallard Duck.', $mallardDuck->display());
         $this->assertEquals('I am swimming.', $mallardDuck->swim());
-        $this->assertEquals('Quack...quack...quack!', $mallardDuck->performQuack());
         $this->assertEquals('I am flying.', $mallardDuck->performFly());
+        $this->assertEquals('Quack...quack...quack!', $mallardDuck->performQuack());
 
-        $redheadDuck = new RedheadDuck();
-        $this->assertEquals('I am Redhead Duck.', $redheadDuck->display());
-        $this->assertEquals('I am swimming.', $redheadDuck->swim());
-        $this->assertEquals('Quack...quack...quack!', $redheadDuck->performQuack());
-        $this->assertEquals('I am flying.', $redheadDuck->performFly());
+        $decoyDuck = new DecoyDuck();
+        $this->assertEquals('I am Decoy Duck.', $decoyDuck->display());
+        $this->assertEquals('I am swimming.', $decoyDuck->swim());
+        $this->assertEquals('I cannot fly!', $decoyDuck->performFly());
+        $this->assertEquals('I cannot quack!', $decoyDuck->performQuack());
 
         $rubberDuck = new RubberDuck();
         $this->assertEquals('I am Rubber Duck.', $rubberDuck->display());
         $this->assertEquals('I am swimming.', $rubberDuck->swim());
-        $this->assertEquals('Squeak...squeak...squeak!', $rubberDuck->performQuack());
         $this->assertEquals('I cannot fly!', $rubberDuck->performFly());
+        $this->assertEquals('Squeak...squeak...squeak!', $rubberDuck->performQuack());
     }
 
     /**
@@ -47,8 +47,8 @@ class StrategyTest extends TestCase
     public function testObjectCanDynamicallyChangeAlgorithmAtRuntime()
     {
         $rubberDuck = new RubberDuck();
-        $this->assertEquals('Squeak...squeak...squeak!', $rubberDuck->performQuack());
         $this->assertEquals('I cannot fly!', $rubberDuck->performFly());
+        $this->assertEquals('Squeak...squeak...squeak!', $rubberDuck->performQuack());
 
         $rubberDuck->setFlyBehavior(new FlyRocketPowered());
         $this->assertEquals('Woo-hoo! I am flying with a rocket.', $rubberDuck->performFly());
