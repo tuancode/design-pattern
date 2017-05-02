@@ -12,25 +12,25 @@ class DecoyDuckTest extends TestCase
 {
     public function testDisplaySuccess()
     {
-        $redheadDuck = new DecoyDuck();
-        $this->assertEquals('I am Decoy Duck.', $redheadDuck->display());
+        $decoyDuck = new DecoyDuck();
+        $this->assertEquals('I am Decoy Duck.', $decoyDuck->display());
     }
 
     public function testSwimSuccess()
     {
-        $redheadDuck = new DecoyDuck();
-        $this->assertEquals('I am swimming.', $redheadDuck->swim());
+        $decoyDuck = new DecoyDuck();
+        $this->assertEquals('I am swimming.', $decoyDuck->swim());
     }
 
     public function testPerformFlyToFlyNoWay()
     {
-        $redheadDuck = new DecoyDuck();
-        $this->assertEquals('I cannot fly!', $redheadDuck->performFly());
+        $decoyDuck = new DecoyDuck();
+        $this->assertEquals('I cannot fly!', $decoyDuck->performFly());
     }
 
     public function testPerformQuackToMuteQuack()
     {
-        $redheadDuck = new DecoyDuck();
-        $this->assertEquals('I cannot quack!', $redheadDuck->performQuack());
+        $decoyDuck = new DecoyDuck();
+        $this->assertEquals('I cannot quack!', $decoyDuck->performQuack());
     }
 }
