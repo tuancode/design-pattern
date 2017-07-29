@@ -3,6 +3,6 @@
 
 Class Diagram
 -------------
-.. image:: Class.svg
+.. image:: Class.png
     :alt: Alt SimUDuck Class Diagram
    :align: center
