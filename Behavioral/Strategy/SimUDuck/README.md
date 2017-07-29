@@ -1,3 +1,3 @@
 SimUDuck
 ========
-<img alt="Class Diagram" style="align: center;" src="Class.png">
+<img title="Class Diagram" alt="Class Diagram" style="align: center;" src="Class.png">
