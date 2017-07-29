@@ -1,6 +1,3 @@
-`SimUDuck`
-============
-
-Class Diagram
--------------
-<img style="align: center;" src="Class.png">
+SimUDuck
+========
+<img alt="Class Diagram" style="align: center;" src="Class.png">
