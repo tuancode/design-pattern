@@ -9,6 +9,6 @@ class KnifeBehavior implements WeaponBehaviorInterface
      */
     public function useWeapon(): string
     {
-        // TODO: Implement useWeapon() method.
+        return 'Cutting with knife';
     }
 }

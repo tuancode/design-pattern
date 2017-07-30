@@ -2,13 +2,16 @@
 
 namespace AdventureGame\Weapon;
 
-class BowAndArrowBehavior implements WeaponBehaviorInterface
+/**
+ * Class AxeBehavior.
+ */
+class AxeBehavior implements WeaponBehaviorInterface
 {
     /**
      * {@inheritdoc}
      */
     public function useWeapon(): string
     {
-        // TODO: Implement useWeapon() method.
+        return 'Chopping with an axe';
     }
 }

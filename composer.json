@@ -14,8 +14,8 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "SimUDuck\\": "Behavioral/Strategy/SimUDuck/",
-            "AdventureGame\\": "Behavioral/Strategy/AdventureGame/"
+            "SimUDuck\\": "Behavioral/Strategy/SimUDuck/src",
+            "AdventureGame\\": "Behavioral/Strategy/AdventureGame/src"
         }
     }
 }

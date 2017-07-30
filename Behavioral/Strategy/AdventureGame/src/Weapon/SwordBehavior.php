@@ -2,16 +2,13 @@
 
 namespace AdventureGame\Weapon;
 
-/**
- * Class AxeBehavior.
- */
-class AxeBehavior implements WeaponBehaviorInterface
+class SwordBehavior implements WeaponBehaviorInterface
 {
     /**
      * {@inheritdoc}
      */
     public function useWeapon(): string
     {
-        // TODO: Implement useWeapon() method.
+        return 'Swinging a sword';
     }
 }
