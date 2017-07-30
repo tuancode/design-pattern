@@ -18,7 +18,7 @@
 
     <testsuites>
         <testsuite name="DesignPattern Test Suite">
-            <directory suffix="Test.php">./Behavioral/*/Tests</directory>
+            <directory suffix="Test.php">./Behavioral/*/tests</directory>
         </testsuite>
     </testsuites>
     <filter>
@@ -28,7 +28,7 @@
         <whitelist>
             <directory suffix=".php">./Behavioral</directory>
             <exclude>
-                <directory>./Behavioral/*/Tests</directory>
+                <directory>./Behavioral/*/tests</directory>
             </exclude>
         </whitelist>
     </filter>
