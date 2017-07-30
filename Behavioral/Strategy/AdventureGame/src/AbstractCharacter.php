@@ -22,10 +22,24 @@ abstract class AbstractCharacter
     abstract public function fight(): string;
 
     /**
-     * @param WeaponBehaviorInterface $weapon
+     * Use weapon to fight.
+     *
+     * @return string
      */
-    public function setWeapon(WeaponBehaviorInterface $weapon)
+    public function fightWithWeapon(): string
+    {
+        return $this->weapon->useWeapon();
+    }
+
+    /**
+     * @param WeaponBehaviorInterface $weapon
+     *
+     * @return AbstractCharacter
+     */
+    public function setWeapon(WeaponBehaviorInterface $weapon): AbstractCharacter
     {
         $this->weapon = $weapon;
+
+        return $this;
     }
 }

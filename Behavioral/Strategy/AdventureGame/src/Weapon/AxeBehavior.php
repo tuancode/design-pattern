@@ -3,7 +3,7 @@
 namespace AdventureGame\Weapon;
 
 /**
- * Class AxeBehavior.
+ * AxeBehavior represent the way to use axe as weapon for fighting.
  */
 class AxeBehavior implements WeaponBehaviorInterface
 {

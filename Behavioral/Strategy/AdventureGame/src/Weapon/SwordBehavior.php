@@ -2,6 +2,9 @@
 
 namespace AdventureGame\Weapon;
 
+/**
+ * SwordBehavior represent the way to use sword as weapon for fighting.
+ */
 class SwordBehavior implements WeaponBehaviorInterface
 {
     /**

@@ -2,16 +2,26 @@
 
 namespace AdventureGame;
 
+use AdventureGame\Weapon\KnifeBehavior;
+
 /**
- * Class Troll.
+ * The Troll.
  */
 class Troll extends AbstractCharacter
 {
+    /**
+     * Init Troll's weapon.
+     */
+    public function __construct()
+    {
+        $this->weapon = new KnifeBehavior();
+    }
+
     /**
      * {@inheritdoc}
      */
     public function fight(): string
     {
-        // TODO: Implement fight() method.
+        return 'Hit below the belt';
     }
 }
