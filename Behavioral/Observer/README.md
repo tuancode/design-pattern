@@ -4,4 +4,4 @@ Defines a one-to-many dependency between objects so that when one object changes
 
 Class diagram
 -------------
-<img title="Class Diagram" alt="Class Diagram" style="align: center;" src="class.png">
+<img height="580" width="600" alt="Class Diagram" style="align: center;" src="class.png">
