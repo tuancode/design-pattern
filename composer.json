@@ -15,7 +15,8 @@
     "autoload": {
         "psr-4": {
             "SimUDuck\\": "Behavioral/Strategy/SimUDuck/src",
-            "AdventureGame\\": "Behavioral/Strategy/AdventureGame/src"
+            "AdventureGame\\": "Behavioral/Strategy/AdventureGame/src",
+            "WeatherStation\\": "Behavioral/Observer/WeatherStation/src"
         }
     }
 }
