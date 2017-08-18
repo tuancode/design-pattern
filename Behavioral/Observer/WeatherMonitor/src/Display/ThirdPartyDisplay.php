@@ -1,9 +1,9 @@
 <?php
 
-namespace WeatherStation\Display;
+namespace WeatherMonitor\Display;
 
-use WeatherStation\ObserverInterface;
-use WeatherStation\SubjectInterface;
+use WeatherMonitor\ObserverInterface;
+use WeatherMonitor\SubjectInterface;
 
 /**
  * Class ThirdPartyDisplay.

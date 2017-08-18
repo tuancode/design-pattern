@@ -1,9 +1,10 @@
 <?php
 
-namespace WeatherStation\Display;
+namespace WeatherMonitor\Display;
 
-use WeatherStation\ObserverInterface;
-use WeatherStation\SubjectInterface;
+use WeatherMonitor\ObserverInterface;
+use WeatherMonitor\SubjectInterface;
+use WeatherMonitor\WeatherData;
 
 /**
  * Class CurrentConditionDisplay.
@@ -21,11 +22,25 @@ class CurrentConditionDisplay implements ObserverInterface, DisplayElementInterf
     private $humidity;
 
     /**
+     * CurrentConditionDisplay constructor.
+     *
+     * @param SubjectInterface $subject
+     */
+    public function __construct(SubjectInterface $subject)
+    {
+        $subject->attach($this);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function update(SubjectInterface $subject): void
     {
-        // TODO: Implement update() method.
+        if ($subject instanceof WeatherData) {
+            $this->temperature = $subject->getTemperature();
+            $this->humidity = $subject->getHumidity();
+            $this->display();
+        }
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace WeatherStation;
+namespace WeatherMonitor;
 
 /**
  * Interface ObserverInterface.

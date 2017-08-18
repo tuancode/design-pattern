@@ -1,10 +1,9 @@
 <?php
 
-namespace WeatherStation\Display;
-
+namespace WeatherMonitor\Display;
 
 /**
- * Interface DisplayElementInterface
+ * Interface DisplayElementInterface.
  */
 interface DisplayElementInterface
 {
