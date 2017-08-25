@@ -66,11 +66,14 @@ class WeatherDataTest extends TestCase
 
     public function testSetMeasurements()
     {
+        $mock = $this->getMockBuilder(WeatherData::class)->setMethods(['measurementsChanged'])->getMock();
+        $mock->expects($this->once())->method('measurementsChanged');
+
+        /** @var WeatherData $weatherData */
         $temperature = 80;
         $humidity = 65;
         $pressure = 30.4;
-
-        $weatherData = new WeatherData();
+        $weatherData = $mock;
         $weatherData->setMeasurements($temperature, $humidity, $pressure);
 
         $this->assertEquals($temperature, $weatherData->getTemperature());
