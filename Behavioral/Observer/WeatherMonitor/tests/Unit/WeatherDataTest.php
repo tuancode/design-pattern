@@ -7,18 +7,21 @@ use WeatherMonitor\Display\HeatIndexDisplay;
 use WeatherMonitor\ObserverInterface;
 use WeatherMonitor\WeatherData;
 
+/**
+ * WeatherData unit test class.
+ */
 class WeatherDataTest extends TestCase
 {
     public function testAttach()
     {
         $weatherData = new WeatherData();
         $heatIndexDisplay = $this->createMock(HeatIndexDisplay::class);
-        $weatherData->attach($heatIndexDisplay);
 
         $reflectionProperty = new \ReflectionProperty($weatherData, 'observers');
         $reflectionProperty->setAccessible(true);
-        $observer = current($reflectionProperty->getValue($weatherData));
 
+        $weatherData->attach($heatIndexDisplay);
+        $observer = current($reflectionProperty->getValue($weatherData));
         $this->assertInstanceOf(HeatIndexDisplay::class, $observer);
     }
 
@@ -26,12 +29,16 @@ class WeatherDataTest extends TestCase
     {
         $weatherData = new WeatherData();
         $heatIndexDisplay = $this->createMock(HeatIndexDisplay::class);
-        $weatherData->detach($heatIndexDisplay);
 
         $reflectionProperty = new \ReflectionProperty($weatherData, 'observers');
         $reflectionProperty->setAccessible(true);
-        $observer = current($reflectionProperty->getValue($weatherData));
 
+        $weatherData->attach($heatIndexDisplay);
+        $observer = current($reflectionProperty->getValue($weatherData));
+        $this->assertInstanceOf(HeatIndexDisplay::class, $observer);
+
+        $weatherData->detach($heatIndexDisplay);
+        $observer = current($reflectionProperty->getValue($weatherData));
         $this->assertNotInstanceOf(HeatIndexDisplay::class, $observer);
     }
 
@@ -86,21 +93,21 @@ class WeatherDataTest extends TestCase
 
     public function testGetHumidity()
     {
-        $pressure = 30.4;
-
-        $weatherData = new WeatherData();
-        $weatherData->setMeasurements(0.0, 0.0, $pressure);
-
-        $this->assertEquals($pressure, $weatherData->getPressure());
-    }
-
-    public function testGetPressure()
-    {
         $humidity = 65;
 
         $weatherData = new WeatherData();
         $weatherData->setMeasurements(0.0, $humidity, 0.0);
 
         $this->assertEquals($humidity, $weatherData->getHumidity());
+    }
+
+    public function testGetPressure()
+    {
+        $pressure = 30.4;
+
+        $weatherData = new WeatherData();
+        $weatherData->setMeasurements(0.0, 0.0, $pressure);
+
+        $this->assertEquals($pressure, $weatherData->getPressure());
     }
 }
