@@ -93,17 +93,23 @@ class WeatherData implements SubjectInterface
      * This method gets called
      * whenever the weather measurements
      * have been updated.
+     */
+    public function measurementsChanged()
+    {
+        $this->notify();
+    }
+
+    /**
+     * Sets weather measurements.
      *
      * @param float $temperature
      * @param float $humidity
      * @param float $pressure
      */
-    public function measurementsChanged(float $temperature, float $humidity, float $pressure)
+    public function setMeasurements(float $temperature, float $humidity, float $pressure)
     {
         $this->temperature = $temperature;
         $this->humidity = $humidity;
         $this->pressure = $pressure;
-
-        $this->notify();
     }
 }
