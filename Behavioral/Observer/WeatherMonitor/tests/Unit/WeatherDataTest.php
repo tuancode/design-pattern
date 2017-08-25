@@ -17,12 +17,11 @@ class WeatherDataTest extends TestCase
         $weatherData = new WeatherData();
         $heatIndexDisplay = $this->createMock(HeatIndexDisplay::class);
 
-        $reflectionProperty = new \ReflectionProperty($weatherData, 'observers');
-        $reflectionProperty->setAccessible(true);
+        $observers = new \ReflectionProperty($weatherData, 'observers');
+        $observers->setAccessible(true);
 
         $weatherData->attach($heatIndexDisplay);
-        $observer = current($reflectionProperty->getValue($weatherData));
-        $this->assertInstanceOf(HeatIndexDisplay::class, $observer);
+        $this->assertInstanceOf(HeatIndexDisplay::class, current($observers->getValue($weatherData)));
     }
 
     public function testDetach()
@@ -30,16 +29,14 @@ class WeatherDataTest extends TestCase
         $weatherData = new WeatherData();
         $heatIndexDisplay = $this->createMock(HeatIndexDisplay::class);
 
-        $reflectionProperty = new \ReflectionProperty($weatherData, 'observers');
-        $reflectionProperty->setAccessible(true);
+        $observers = new \ReflectionProperty($weatherData, 'observers');
+        $observers->setAccessible(true);
 
         $weatherData->attach($heatIndexDisplay);
-        $observer = current($reflectionProperty->getValue($weatherData));
-        $this->assertInstanceOf(HeatIndexDisplay::class, $observer);
+        $this->assertInstanceOf(HeatIndexDisplay::class, current($observers->getValue($weatherData)));
 
         $weatherData->detach($heatIndexDisplay);
-        $observer = current($reflectionProperty->getValue($weatherData));
-        $this->assertNotInstanceOf(HeatIndexDisplay::class, $observer);
+        $this->assertNotInstanceOf(HeatIndexDisplay::class, current($observers->getValue($weatherData)));
     }
 
     public function testNotify()
