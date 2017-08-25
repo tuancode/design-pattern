@@ -30,7 +30,7 @@ class WeatherData implements SubjectInterface
     /**
      * {@inheritdoc}
      */
-    public function attach(ObserverInterface $observer): void
+    public function attach(ObserverInterface $observer)
     {
         $index = array_search($observer, $this->observers);
         if (false === $index) {
@@ -41,7 +41,7 @@ class WeatherData implements SubjectInterface
     /**
      * {@inheritdoc}
      */
-    public function detach(ObserverInterface $observer): void
+    public function detach(ObserverInterface $observer)
     {
         $index = array_search($observer, $this->observers);
         if (false !== $index) {
@@ -52,11 +52,36 @@ class WeatherData implements SubjectInterface
     /**
      * {@inheritdoc}
      */
-    public function notify(): void
+    public function notify()
     {
         foreach ($this->observers as $observer) {
             $observer->update($this);
         }
+    }
+
+    /**
+     * This method gets called
+     * whenever the weather measurements
+     * have been updated.
+     */
+    public function measurementsChanged()
+    {
+        $this->notify();
+    }
+
+    /**
+     * Sets weather measurements.
+     *
+     * @param float $temperature
+     * @param float $humidity
+     * @param float $pressure
+     */
+    public function setMeasurements(float $temperature, float $humidity, float $pressure)
+    {
+        $this->temperature = $temperature;
+        $this->humidity = $humidity;
+        $this->pressure = $pressure;
+        $this->measurementsChanged();
     }
 
     /**
@@ -87,29 +112,5 @@ class WeatherData implements SubjectInterface
     public function getPressure(): float
     {
         return $this->pressure;
-    }
-
-    /**
-     * This method gets called
-     * whenever the weather measurements
-     * have been updated.
-     */
-    public function measurementsChanged()
-    {
-        $this->notify();
-    }
-
-    /**
-     * Sets weather measurements.
-     *
-     * @param float $temperature
-     * @param float $humidity
-     * @param float $pressure
-     */
-    public function setMeasurements(float $temperature, float $humidity, float $pressure)
-    {
-        $this->temperature = $temperature;
-        $this->humidity = $humidity;
-        $this->pressure = $pressure;
     }
 }

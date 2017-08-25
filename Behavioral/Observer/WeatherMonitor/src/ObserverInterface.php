@@ -12,5 +12,5 @@ interface ObserverInterface
      *
      * @param SubjectInterface $subject
      */
-    public function update(SubjectInterface $subject): void;
+    public function update(SubjectInterface $subject);
 }

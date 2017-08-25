@@ -7,7 +7,7 @@ use WeatherMonitor\SubjectInterface;
 use WeatherMonitor\WeatherData;
 
 /**
- * Class StatisticsDisplay.
+ * Statistics Display.
  */
 class StatisticsDisplay implements ObserverInterface, DisplayElementInterface
 {
@@ -44,7 +44,7 @@ class StatisticsDisplay implements ObserverInterface, DisplayElementInterface
     /**
      * {@inheritdoc}
      */
-    public function update(SubjectInterface $subject): void
+    public function update(SubjectInterface $subject)
     {
         if ($subject instanceof WeatherData) {
             $this->tempSum += $subject->getTemperature();

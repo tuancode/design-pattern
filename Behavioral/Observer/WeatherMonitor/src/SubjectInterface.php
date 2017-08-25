@@ -12,17 +12,17 @@ interface SubjectInterface
      *
      * @param ObserverInterface $observer
      */
-    public function attach(ObserverInterface $observer): void;
+    public function attach(ObserverInterface $observer);
 
     /**
      * Detach an observer from list.
      *
      * @param ObserverInterface $observer
      */
-    public function detach(ObserverInterface $observer): void;
+    public function detach(ObserverInterface $observer);
 
     /**
      * Notify observers.
      */
-    public function notify(): void;
+    public function notify();
 }

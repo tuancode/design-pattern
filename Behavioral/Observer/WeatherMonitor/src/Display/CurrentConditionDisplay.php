@@ -7,7 +7,7 @@ use WeatherMonitor\SubjectInterface;
 use WeatherMonitor\WeatherData;
 
 /**
- * Class CurrentConditionDisplay.
+ * Current Condition Display.
  */
 class CurrentConditionDisplay implements ObserverInterface, DisplayElementInterface
 {
@@ -22,7 +22,7 @@ class CurrentConditionDisplay implements ObserverInterface, DisplayElementInterf
     private $humidity;
 
     /**
-     * CurrentConditionDisplay constructor.
+     * Register class object to an observer of subject.
      *
      * @param SubjectInterface $subject
      */
@@ -34,7 +34,7 @@ class CurrentConditionDisplay implements ObserverInterface, DisplayElementInterf
     /**
      * {@inheritdoc}
      */
-    public function update(SubjectInterface $subject): void
+    public function update(SubjectInterface $subject)
     {
         if ($subject instanceof WeatherData) {
             $this->temperature = $subject->getTemperature();
