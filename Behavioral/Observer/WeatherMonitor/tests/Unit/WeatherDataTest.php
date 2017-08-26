@@ -14,29 +14,24 @@ class WeatherDataTest extends TestCase
 {
     public function testAttach()
     {
-        $weatherData = new WeatherData();
         $heatIndexDisplay = $this->createMock(HeatIndexDisplay::class);
 
-        $observers = new \ReflectionProperty($weatherData, 'observers');
-        $observers->setAccessible(true);
-
+        $weatherData = new WeatherData();
         $weatherData->attach($heatIndexDisplay);
-        $this->assertInstanceOf(HeatIndexDisplay::class, current($observers->getValue($weatherData)));
+
+        $this->assertAttributeContains($heatIndexDisplay, 'observers', $weatherData);
     }
 
     public function testDetach()
     {
-        $weatherData = new WeatherData();
         $heatIndexDisplay = $this->createMock(HeatIndexDisplay::class);
-
-        $observers = new \ReflectionProperty($weatherData, 'observers');
-        $observers->setAccessible(true);
+        $weatherData = new WeatherData();
 
         $weatherData->attach($heatIndexDisplay);
-        $this->assertInstanceOf(HeatIndexDisplay::class, current($observers->getValue($weatherData)));
+        $this->assertAttributeContains($heatIndexDisplay, 'observers', $weatherData);
 
         $weatherData->detach($heatIndexDisplay);
-        $this->assertNotInstanceOf(HeatIndexDisplay::class, current($observers->getValue($weatherData)));
+        $this->assertAttributeNotContains($heatIndexDisplay, 'observers', $weatherData);
     }
 
     public function testNotify()
@@ -66,13 +61,14 @@ class WeatherDataTest extends TestCase
 
     public function testSetMeasurements()
     {
+        $temperature = 80;
+        $humidity = 65;
+        $pressure = 30.4;
+
         $mock = $this->getMockBuilder(WeatherData::class)->setMethods(['measurementsChanged'])->getMock();
         $mock->expects($this->once())->method('measurementsChanged');
 
         /** @var WeatherData $weatherData */
-        $temperature = 80;
-        $humidity = 65;
-        $pressure = 30.4;
         $weatherData = $mock;
         $weatherData->setMeasurements($temperature, $humidity, $pressure);
 
