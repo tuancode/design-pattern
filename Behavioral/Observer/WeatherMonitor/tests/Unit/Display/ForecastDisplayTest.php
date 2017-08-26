@@ -58,13 +58,13 @@ class ForecastDisplayTest extends TestCase
         $weatherData = $this->createMock(WeatherData::class);
         $forecastDisplay = new ForecastDisplay($weatherData);
 
-        $temperatureDisplay = new \ReflectionProperty($forecastDisplay, 'currentPressure');
-        $temperatureDisplay->setAccessible(true);
-        $temperatureDisplay->setValue($forecastDisplay, $currentPressure);
+        $currentPressureProperty = new \ReflectionProperty($forecastDisplay, 'currentPressure');
+        $currentPressureProperty->setAccessible(true);
+        $currentPressureProperty->setValue($forecastDisplay, $currentPressure);
 
-        $humidityDisplay = new \ReflectionProperty($forecastDisplay, 'lastPressure');
-        $humidityDisplay->setAccessible(true);
-        $humidityDisplay->setValue($forecastDisplay, $lastPressure);
+        $lastPressureProperty = new \ReflectionProperty($forecastDisplay, 'lastPressure');
+        $lastPressureProperty->setAccessible(true);
+        $lastPressureProperty->setValue($forecastDisplay, $lastPressure);
 
         $this->assertEquals($expected, $forecastDisplay->display());
     }

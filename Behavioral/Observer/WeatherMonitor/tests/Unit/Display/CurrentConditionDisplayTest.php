@@ -53,13 +53,13 @@ class CurrentConditionDisplayTest extends TestCase
         $weatherData = $this->createMock(WeatherData::class);
         $currentConditionDisplay = new CurrentConditionDisplay($weatherData);
 
-        $temperatureDisplay = new \ReflectionProperty($currentConditionDisplay, 'temperature');
-        $temperatureDisplay->setAccessible(true);
-        $temperatureDisplay->setValue($currentConditionDisplay, $temperature);
+        $temperatureProperty = new \ReflectionProperty($currentConditionDisplay, 'temperature');
+        $temperatureProperty->setAccessible(true);
+        $temperatureProperty->setValue($currentConditionDisplay, $temperature);
 
-        $humidityDisplay = new \ReflectionProperty($currentConditionDisplay, 'humidity');
-        $humidityDisplay->setAccessible(true);
-        $humidityDisplay->setValue($currentConditionDisplay, $humidity);
+        $humidityProperty = new \ReflectionProperty($currentConditionDisplay, 'humidity');
+        $humidityProperty->setAccessible(true);
+        $humidityProperty->setValue($currentConditionDisplay, $humidity);
 
         $this->assertEquals($expected, $currentConditionDisplay->display());
     }
