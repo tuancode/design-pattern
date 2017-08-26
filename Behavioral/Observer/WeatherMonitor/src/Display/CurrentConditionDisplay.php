@@ -48,6 +48,6 @@ class CurrentConditionDisplay implements ObserverInterface, DisplayElementInterf
      */
     public function display(): string
     {
-        return sprintf('Current conditions: %s F degrees and %s humidity', $this->temperature, $this->humidity);
+        return sprintf('Current conditions: %1$.1f F degrees and %1$.1f humidity', $this->temperature, $this->humidity);
     }
 }

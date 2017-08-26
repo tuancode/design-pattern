@@ -48,7 +48,7 @@ class CurrentConditionDisplayTest extends TestCase
     {
         $temperature = 80;
         $humidity = 65;
-        $expected = sprintf('Current conditions: %s F degrees and %s humidity', $temperature, $humidity);
+        $expected = sprintf('Current conditions: %1$.1f F degrees and %1$.1f humidity', $temperature, $humidity);
 
         $weatherData = $this->createMock(WeatherData::class);
         $currentConditionDisplay = new CurrentConditionDisplay($weatherData);

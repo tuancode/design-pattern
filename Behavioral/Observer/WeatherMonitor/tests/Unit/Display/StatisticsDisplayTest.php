@@ -48,7 +48,7 @@ class StatisticsDisplayTest extends TestCase
         $sum = 15;
         $numReadings = 1;
         $avg = $sum / $numReadings;
-        $expected = sprintf('Avg/Max/Min temperature = %f /%f /%f', $avg, $max, $min);
+        $expected = sprintf('Avg/Max/Min temperature = %1$.1f/%1$.1f/%1$.1f', $avg, $max, $min);
 
         $weatherData = $this->createMock(WeatherData::class);
         $currentConditionDisplay = new StatisticsDisplay($weatherData);

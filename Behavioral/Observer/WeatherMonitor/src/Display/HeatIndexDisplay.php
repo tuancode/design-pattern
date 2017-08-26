@@ -42,7 +42,7 @@ class HeatIndexDisplay implements ObserverInterface, DisplayElementInterface
      */
     public function display(): string
     {
-        return sprintf('Heat index is %f', $this->heatIndex);
+        return sprintf('Heat index is %1$.5f', $this->heatIndex);
     }
 
     /**
