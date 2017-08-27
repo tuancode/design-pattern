@@ -65,10 +65,10 @@ class StatisticsDisplay implements ObserverInterface, DisplayElementInterface
     /**
      * {@inheritdoc}
      */
-    public function display(): string
+    public function display()
     {
-        return sprintf(
-            'Avg/Max/Min temperature = %1$.1f/%1$.1f/%1$.1f',
+        echo sprintf(
+            "Avg/Max/Min temperature = %1\$.1f/%2\$.1f/%3\$.1f\n",
             ($this->tempSum / $this->numReadings),
             $this->maxTemp,
             $this->minTemp

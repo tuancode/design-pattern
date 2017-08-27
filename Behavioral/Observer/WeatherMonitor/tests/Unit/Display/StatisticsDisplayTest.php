@@ -48,7 +48,7 @@ class StatisticsDisplayTest extends TestCase
         $sum = 15;
         $numReadings = 1;
         $avg = $sum / $numReadings;
-        $expected = sprintf('Avg/Max/Min temperature = %1$.1f/%1$.1f/%1$.1f', $avg, $max, $min);
+        $expected = sprintf("Avg/Max/Min temperature = %1\$.1f/%2\$.1f/%3\$.1f\n", $avg, $max, $min);
 
         $weatherData = $this->createMock(WeatherData::class);
         $currentConditionDisplay = new StatisticsDisplay($weatherData);
@@ -69,6 +69,8 @@ class StatisticsDisplayTest extends TestCase
         $numReadingsProperty->setAccessible(true);
         $numReadingsProperty->setValue($currentConditionDisplay, $numReadings);
 
-        $this->assertEquals($expected, $currentConditionDisplay->display());
+        $currentConditionDisplay->display();
+
+        $this->expectOutputString($expected);
     }
 }

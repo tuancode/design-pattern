@@ -48,7 +48,7 @@ class CurrentConditionDisplayTest extends TestCase
     {
         $temperature = 80;
         $humidity = 65;
-        $expected = sprintf('Current conditions: %1$.1f F degrees and %1$.1f humidity', $temperature, $humidity);
+        $expected = sprintf("Current conditions: %1\$.1fF degrees and %2\$.1f%% humidity\n", $temperature, $humidity);
 
         $weatherData = $this->createMock(WeatherData::class);
         $currentConditionDisplay = new CurrentConditionDisplay($weatherData);
@@ -61,6 +61,8 @@ class CurrentConditionDisplayTest extends TestCase
         $humidityProperty->setAccessible(true);
         $humidityProperty->setValue($currentConditionDisplay, $humidity);
 
-        $this->assertEquals($expected, $currentConditionDisplay->display());
+        $currentConditionDisplay->display();
+
+        $this->expectOutputString($expected);
     }
 }

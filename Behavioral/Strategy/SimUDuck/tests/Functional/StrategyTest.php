@@ -10,7 +10,7 @@ use SimUDuck\RubberDuck;
 use PHPUnit\Framework\TestCase;
 
 /**
- * StrategyTest functional test class.
+ * StrategyPattern functional test class.
  */
 class StrategyTest extends TestCase
 {

@@ -47,7 +47,7 @@ class HeatIndexDisplayTest extends TestCase
     public function testDisplay()
     {
         $heatIndex = 82.95535;
-        $expected = sprintf('Heat index is %1$.5f', $heatIndex);
+        $expected = sprintf("Heat index is %1\$.5f\n", $heatIndex);
 
         $weatherData = $this->createMock(WeatherData::class);
         $heatIndexDisplay = new HeatIndexDisplay($weatherData);
@@ -56,6 +56,8 @@ class HeatIndexDisplayTest extends TestCase
         $temperatureProperty->setAccessible(true);
         $temperatureProperty->setValue($heatIndexDisplay, $heatIndex);
 
-        $this->assertEquals($expected, $heatIndexDisplay->display());
+        $heatIndexDisplay->display();
+
+        $this->expectOutputString($expected);
     }
 }

@@ -81,6 +81,7 @@ class WeatherData implements SubjectInterface
         $this->temperature = $temperature;
         $this->humidity = $humidity;
         $this->pressure = $pressure;
+
         $this->measurementsChanged();
     }
 

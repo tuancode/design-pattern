@@ -39,15 +39,20 @@ class CurrentConditionDisplay implements ObserverInterface, DisplayElementInterf
         if ($subject instanceof WeatherData) {
             $this->temperature = $subject->getTemperature();
             $this->humidity = $subject->getHumidity();
-            $this->display();
+
+            return $this->display();
         }
     }
 
     /**
      * {@inheritdoc}
      */
-    public function display(): string
+    public function display()
     {
-        return sprintf('Current conditions: %1$.1f F degrees and %1$.1f humidity', $this->temperature, $this->humidity);
+        echo sprintf(
+            "Current conditions: %1\$.1fF degrees and %2\$.1f%% humidity\n",
+            $this->temperature,
+            $this->humidity
+        );
     }
 }

@@ -66,7 +66,9 @@ class ForecastDisplayTest extends TestCase
         $lastPressureProperty->setAccessible(true);
         $lastPressureProperty->setValue($forecastDisplay, $lastPressure);
 
-        $this->assertEquals($expected, $forecastDisplay->display());
+        $forecastDisplay->display();
+
+        $this->expectOutputString($expected);
     }
 
     /**
@@ -77,9 +79,9 @@ class ForecastDisplayTest extends TestCase
     public function displayDataProvider()
     {
         return [
-            [1, 0, 'Forecast: Improving weather on the way!'],
-            [1, 1, 'Forecast: More of the same'],
-            [0, 1, 'Forecast: Watch out for cooler, rainy weather'],
+            [1, 0, "Forecast: Improving weather on the way!\n"],
+            [1, 1, "Forecast: More of the same\n"],
+            [0, 1, "Forecast: Watch out for cooler, rainy weather\n"],
         ];
     }
 }

@@ -33,16 +33,17 @@ class HeatIndexDisplay implements ObserverInterface, DisplayElementInterface
     {
         if ($subject instanceof WeatherData) {
             $this->heatIndex = $this->computeHeatIndex($subject->getTemperature(), $subject->getHumidity());
-            $this->display();
+
+            return $this->display();
         }
     }
 
     /**
      * {@inheritdoc}
      */
-    public function display(): string
+    public function display()
     {
-        return sprintf('Heat index is %1$.5f', $this->heatIndex);
+        echo sprintf("Heat index is %1$.5f\n", $this->heatIndex);
     }
 
     /**

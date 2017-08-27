@@ -46,7 +46,7 @@ class ForecastDisplay implements ObserverInterface, DisplayElementInterface
     /**
      * {@inheritdoc}
      */
-    public function display(): string
+    public function display()
     {
         $message = 'Forecast: ';
 
@@ -58,6 +58,6 @@ class ForecastDisplay implements ObserverInterface, DisplayElementInterface
             $message .= 'Watch out for cooler, rainy weather';
         }
 
-        return $message;
+        echo "{$message}\n";
     }
 }

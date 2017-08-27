@@ -8,7 +8,9 @@ namespace WeatherMonitor\Display;
 interface DisplayElementInterface
 {
     /**
-     * @return string
+     * Output display message.
+     *
+     * @return mixed
      */
-    public function display(): string;
+    public function display();
 }
