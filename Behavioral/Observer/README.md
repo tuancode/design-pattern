@@ -5,11 +5,11 @@ Defines a one-to-many dependency between objects so that when one object changes
 Class diagram
 -------------
 <p align="center">
-    <img height="487" width="700" alt="Class Diagram" src="class.png">
+    <img height="487" width="700" alt="Class Diagram" src="models/class.png">
 </p>
 
 Sequence diagram
 ---------------
 <p align="center">
-    <img alt="Sequence Diagram" src="sequence.png">
+    <img alt="Sequence Diagram" src="models/sequence.png">
 </p>
