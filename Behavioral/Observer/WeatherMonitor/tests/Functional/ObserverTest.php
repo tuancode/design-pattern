@@ -5,7 +5,6 @@ namespace WeatherMonitor\Tests\Functional;
 use PHPUnit\Framework\TestCase;
 use WeatherMonitor\Display\CurrentConditionDisplay;
 use WeatherMonitor\Display\ForecastDisplay;
-use WeatherMonitor\Display\HeatIndexDisplay;
 use WeatherMonitor\Display\StatisticsDisplay;
 use WeatherMonitor\WeatherData;
 
@@ -42,8 +41,6 @@ class ObserverTest extends TestCase
         $statisticsDisplay = new StatisticsDisplay($weatherData);
         /** @noinspection PhpUnusedLocalVariableInspection */
         $forecastDisplay = new ForecastDisplay($weatherData);
-        /** @noinspection PhpUnusedLocalVariableInspection start */
-        $heatIndexDisplay = new HeatIndexDisplay($weatherData);
 
         $weatherData->setMeasurements($temperature, $humidity, $pressure);
         $expected = implode('', $expected);
@@ -65,7 +62,6 @@ class ObserverTest extends TestCase
                     "Current conditions: 80.0F degrees and 65.0% humidity\n",
                     "Avg/Max/Min temperature = 80.0/80.0/80.0\n",
                     "Forecast: Improving weather on the way!\n",
-                    "Heat index is 82.95535\n",
                 ],
             ],
             [
@@ -76,7 +72,6 @@ class ObserverTest extends TestCase
                     "Current conditions: 82.0F degrees and 70.0% humidity\n",
                     "Avg/Max/Min temperature = 82.0/82.0/82.0\n",
                     "Forecast: Watch out for cooler, rainy weather\n",
-                    "Heat index is 86.90123\n",
                 ],
             ],
             [
@@ -87,7 +82,6 @@ class ObserverTest extends TestCase
                     "Current conditions: 78.0F degrees and 90.0% humidity\n",
                     "Avg/Max/Min temperature = 78.0/78.0/78.0\n",
                     "Forecast: Watch out for cooler, rainy weather\n",
-                    "Heat index is 83.64967\n",
                 ],
             ],
         ];
@@ -99,11 +93,10 @@ class ObserverTest extends TestCase
      */
     public function testObserverDetachAndStopToReceiveNotificationFromSubject()
     {
-        // Expected no heat index display
+        // Expected no forecast display
         $expected = [
             "Current conditions: 80.0F degrees and 65.0% humidity\n",
             "Avg/Max/Min temperature = 80.0/80.0/80.0\n",
-            "Forecast: Improving weather on the way!\n",
         ];
 
         $weatherData = new WeatherData();
@@ -115,10 +108,8 @@ class ObserverTest extends TestCase
         $statisticsDisplay = new StatisticsDisplay($weatherData);
         /** @noinspection PhpUnusedLocalVariableInspection */
         $forecastDisplay = new ForecastDisplay($weatherData);
-        /** @noinspection PhpUnusedLocalVariableInspection */
-        $heatIndexDisplay = new HeatIndexDisplay($weatherData);
 
-        $weatherData->detach($heatIndexDisplay); // Remove heatIndex observer
+        $weatherData->detach($forecastDisplay); // Remove forecastDisplay observer
         $weatherData->setMeasurements(80, 65, 30.4);
 
         $this->expectOutputString(implode('', $expected));

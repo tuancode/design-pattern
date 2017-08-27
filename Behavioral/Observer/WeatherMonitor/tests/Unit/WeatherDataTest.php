@@ -3,7 +3,7 @@
 namespace WeatherMonitor\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use WeatherMonitor\Display\HeatIndexDisplay;
+use WeatherMonitor\Display\ForecastDisplay;
 use WeatherMonitor\ObserverInterface;
 use WeatherMonitor\WeatherData;
 
@@ -14,38 +14,38 @@ class WeatherDataTest extends TestCase
 {
     public function testAttach()
     {
-        $heatIndexDisplay = $this->createMock(HeatIndexDisplay::class);
+        $forecastDisplay = $this->createMock(ForecastDisplay::class);
 
         $weatherData = new WeatherData();
-        $weatherData->attach($heatIndexDisplay);
+        $weatherData->attach($forecastDisplay);
 
-        $this->assertAttributeContains($heatIndexDisplay, 'observers', $weatherData);
+        $this->assertAttributeContains($forecastDisplay, 'observers', $weatherData);
     }
 
     public function testDetach()
     {
-        $heatIndexDisplay = $this->createMock(HeatIndexDisplay::class);
+        $forecastDisplay = $this->createMock(ForecastDisplay::class);
         $weatherData = new WeatherData();
 
-        $weatherData->attach($heatIndexDisplay);
-        $this->assertAttributeContains($heatIndexDisplay, 'observers', $weatherData);
+        $weatherData->attach($forecastDisplay);
+        $this->assertAttributeContains($forecastDisplay, 'observers', $weatherData);
 
-        $weatherData->detach($heatIndexDisplay);
-        $this->assertAttributeNotContains($heatIndexDisplay, 'observers', $weatherData);
+        $weatherData->detach($forecastDisplay);
+        $this->assertAttributeNotContains($forecastDisplay, 'observers', $weatherData);
     }
 
     public function testNotify()
     {
-        $mock = $this->getMockBuilder(HeatIndexDisplay::class)
+        $mock = $this->getMockBuilder(ForecastDisplay::class)
             ->disableOriginalConstructor()
             ->setMethods(['update'])
             ->getMock();
         $mock->expects($this->once())->method('update');
 
-        /** @var ObserverInterface $heatIndexDisplay */
-        $heatIndexDisplay = $mock;
+        /** @var ObserverInterface $forecastDisplay */
+        $forecastDisplay = $mock;
         $weatherData = new WeatherData();
-        $weatherData->attach($heatIndexDisplay);
+        $weatherData->attach($forecastDisplay);
         $weatherData->notify();
     }
 
