@@ -7984,7 +7984,7 @@
 											"width": 201,
 											"height": 51,
 											"autoResize": false,
-											"text": "Each displays object attached themself to WeatherData via their constructors",
+											"text": "Each display object attached itself to WeatherData via it's constructor",
 											"wordWrap": true
 										}
 									],
