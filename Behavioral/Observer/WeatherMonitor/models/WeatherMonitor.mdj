@@ -5797,7 +5797,7 @@
 													"left": 656,
 													"top": 80,
 													"width": 1,
-													"height": 593,
+													"height": 633,
 													"autoResize": false
 												}
 											],
@@ -5813,7 +5813,7 @@
 											"left": 560,
 											"top": 40,
 											"width": 191,
-											"height": 633,
+											"height": 673,
 											"autoResize": false,
 											"stereotypeDisplay": "label",
 											"showVisibility": true,
@@ -5999,7 +5999,7 @@
 													"left": 838,
 													"top": 80,
 													"width": 1,
-													"height": 585,
+													"height": 633,
 													"autoResize": false
 												}
 											],
@@ -6015,7 +6015,7 @@
 											"left": 768,
 											"top": 40,
 											"width": 139,
-											"height": 625,
+											"height": 673,
 											"autoResize": false,
 											"stereotypeDisplay": "label",
 											"showVisibility": true,
@@ -6201,7 +6201,7 @@
 													"left": 988,
 													"top": 80,
 													"width": 1,
-													"height": 585,
+													"height": 633,
 													"autoResize": false
 												}
 											],
@@ -6217,7 +6217,7 @@
 											"left": 920,
 											"top": 40,
 											"width": 136,
-											"height": 625,
+											"height": 673,
 											"autoResize": false,
 											"stereotypeDisplay": "label",
 											"showVisibility": true,
@@ -6403,7 +6403,7 @@
 													"left": 94,
 													"top": 80,
 													"width": 1,
-													"height": 607,
+													"height": 641,
 													"autoResize": false
 												}
 											],
@@ -6419,7 +6419,7 @@
 											"left": 24,
 											"top": 40,
 											"width": 140,
-											"height": 647,
+											"height": 681,
 											"autoResize": false,
 											"stereotypeDisplay": "label",
 											"showVisibility": true,
