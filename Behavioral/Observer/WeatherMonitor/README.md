@@ -13,3 +13,9 @@ Class diagram
 <p align="center">
     <img alt="Class Diagram" src="models/class.png">
 </p>
+
+Sequence diagram
+---------------
+<p align="center">
+    <img alt="Sequence Diagram" src="models/sequence.png">
+</p>
