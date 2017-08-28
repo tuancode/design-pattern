@@ -1,21 +1,22 @@
 {
-    "name": "tuanvu/design-pattern",
-    "description": "Design Pattern is implemented by PHP",
-    "type": "project",
-    "require-dev": {
-        "phpunit/phpunit": "^6.1"
-    },
-    "authors": [
-        {
-            "name": "Tuan Vu",
-            "email": "tuan.vu@dirox.net"
-        }
-    ],
-    "minimum-stability": "stable",
-    "autoload": {
-        "psr-4": {
-            "SimUDuck\\": "Behavioral/Strategy/SimUDuck/src",
-            "AdventureGame\\": "Behavioral/Strategy/AdventureGame/src"
-        }
+  "name": "tuanvu/design-pattern",
+  "description": "Design Pattern is implemented by PHP",
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^6.2"
+  },
+  "authors": [
+    {
+      "name": "Tuan Vu",
+      "email": "tuan.vu@dirox.net"
     }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "SimUDuck\\": "Behavioral/Strategy/SimUDuck/src",
+      "AdventureGame\\": "Behavioral/Strategy/AdventureGame/src",
+      "WeatherMonitor\\": "Behavioral/Observer/WeatherMonitor/src"
+    }
+  }
 }
