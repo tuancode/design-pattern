@@ -5,11 +5,11 @@ Attach additional responsibilities to an object dynamically. Decorators provide 
 Class diagram
 -------------
 <p align="center">
-    <img alt="Class Diagram" src="models/class.png">
+    <img alt="Class Diagram" src="models/Class.png">
 </p>
 
 Sequence diagram
 ---------------
 <p align="center">
-    <img alt="Sequence Diagram" src="models/sequence.png">
+    <img alt="Sequence Diagram" src="models/Sequence.png">
 </p>
