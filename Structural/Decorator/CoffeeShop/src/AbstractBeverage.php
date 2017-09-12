@@ -10,7 +10,7 @@ abstract class AbstractBeverage
     /**
      * @var string
      */
-    protected $description;
+    protected $description = 'Unknown Beverage';
 
     /**
      * Get beverage description.

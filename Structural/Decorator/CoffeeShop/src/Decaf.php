@@ -7,6 +7,8 @@ namespace CoffeeShop;
  */
 class Decaf extends AbstractBeverage
 {
+    const COST = 1.05;
+
     /**
      * Init beverage description.
      */

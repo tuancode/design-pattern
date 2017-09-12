@@ -7,6 +7,8 @@ namespace CoffeeShop;
  */
 class DarkRoast extends AbstractBeverage
 {
+    const COST = 0.99;
+
     /**
      * Init beverage description.
      */

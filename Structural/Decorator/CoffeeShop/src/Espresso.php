@@ -7,6 +7,8 @@ namespace CoffeeShop;
  */
 class Espresso extends AbstractBeverage
 {
+    const COST = 1.99;
+
     /**
      * Init beverage description.
      */

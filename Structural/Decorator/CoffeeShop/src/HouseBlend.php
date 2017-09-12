@@ -7,6 +7,8 @@ namespace CoffeeShop;
  */
 class HouseBlend extends AbstractBeverage
 {
+    const COST = 0.89;
+
     /**
      * Init beverage description.
      */
