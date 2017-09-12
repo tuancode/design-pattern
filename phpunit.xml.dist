@@ -18,7 +18,8 @@
 
     <testsuites>
         <testsuite name="DesignPattern Test Suite">
-            <directory suffix="Test.php">./Behavioral/*/tests</directory>
+            <directory suffix="Test.php">./Behavioral/*/*/tests</directory>
+            <directory suffix="Test.php">./Structural/*/*/tests</directory>
         </testsuite>
     </testsuites>
     <filter>
@@ -27,8 +28,10 @@
         </blacklist>
         <whitelist>
             <directory suffix=".php">./Behavioral</directory>
+            <directory suffix=".php">./Structural</directory>
             <exclude>
-                <directory>./Behavioral/*/tests</directory>
+                <directory>./Behavioral/*/*/tests</directory>
+                <directory>./Structural/*/*/tests</directory>
             </exclude>
         </whitelist>
     </filter>

@@ -7,6 +7,7 @@ namespace CoffeeShop;
  */
 class Espresso extends AbstractBeverage
 {
+    const DESCRIPTION = 'Espresso';
     const COST = 1.99;
 
     /**
@@ -14,13 +15,14 @@ class Espresso extends AbstractBeverage
      */
     public function __construct()
     {
+        $this->description = self::DESCRIPTION;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function cost(): int
+    public function cost(): float
     {
-        // TODO: Implement cost() method.
+        return self::COST;
     }
 }

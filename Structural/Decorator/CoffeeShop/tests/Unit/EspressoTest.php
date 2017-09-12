@@ -12,17 +12,15 @@ class EspressoTest extends TestCase
 {
     public function testDescription()
     {
-        $expected = 'Espresso';
         $espresso = new Espresso();
 
-        $this->assertAttributeEquals($expected, 'description', $espresso);
+        $this->assertAttributeEquals(Espresso::DESCRIPTION, 'description', $espresso);
     }
 
     public function testCost()
     {
-        $expected = 1.99;
         $espresso = new Espresso();
 
-        $this->assertEquals($expected, $espresso->cost());
+        $this->assertEquals(Espresso::COST, $espresso->cost());
     }
 }

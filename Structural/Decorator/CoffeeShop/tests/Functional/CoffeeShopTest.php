@@ -15,7 +15,7 @@ class CoffeeShopTest extends TestCase
 {
     public function testGetCoffeeBillForHouseBlendSoyMochaWhip()
     {
-        $expectedBill = 'House Blend, Soy, Milk, Mocha, Whip: $1.44';
+        $expectedBill = 'House Blend, Soy, Mocha, Whip: $1.34';
 
         $beverage = new HouseBlend();
         $beverage = new Soy($beverage);

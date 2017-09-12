@@ -12,17 +12,15 @@ class DecafTest extends TestCase
 {
     public function testDescription()
     {
-        $expected = 'Decaf';
         $decaf = new Decaf();
 
-        $this->assertAttributeEquals($expected, 'description', $decaf);
+        $this->assertAttributeEquals(Decaf::DESCRIPTION, 'description', $decaf);
     }
 
     public function testCost()
     {
-        $expected = 1.05;
         $decaf = new Decaf();
 
-        $this->assertEquals($expected, $decaf->cost());
+        $this->assertEquals(Decaf::COST, $decaf->cost());
     }
 }

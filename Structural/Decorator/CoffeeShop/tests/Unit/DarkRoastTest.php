@@ -12,17 +12,15 @@ class DarkRoastTest extends TestCase
 {
     public function testDescription()
     {
-        $expected = 'Dark Roast';
         $darkRoast = new DarkRoast();
 
-        $this->assertAttributeEquals($expected, 'description', $darkRoast);
+        $this->assertAttributeEquals(DarkRoast::DESCRIPTION, 'description', $darkRoast);
     }
 
     public function testCost()
     {
-        $expected = 0.99;
         $darkRoast = new DarkRoast();
 
-        $this->assertEquals($expected, $darkRoast->cost());
+        $this->assertEquals(DarkRoast::COST, $darkRoast->cost());
     }
 }

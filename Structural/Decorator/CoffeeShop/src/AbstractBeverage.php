@@ -25,7 +25,7 @@ abstract class AbstractBeverage
     /**
      * Caculate beverage cost.
      *
-     * @return int
+     * @return float
      */
-    abstract public function cost(): int;
+    abstract public function cost(): float;
 }

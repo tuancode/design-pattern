@@ -14,21 +14,21 @@ class SoyTest extends TestCase
 {
     public function testDescription()
     {
-        $expected = 'House Blend, Soy';
-        $beverage = $this->createMock(HouseBlend::class);
-        $soy = new Soy($beverage);
+        $expected = HouseBlend::DESCRIPTION.Soy::DESCRIPTION;
+        $beverage = $this->getMockBuilder(HouseBlend::class)->setMethods(['getDescription'])->getMock();
+        $beverage->expects($this->once())->method('getDescription')->will($this->returnValue(HouseBlend::DESCRIPTION));
 
-        $this->assertAttributeEquals($expected, 'description', $soy);
+        if ($beverage instanceof AbstractBeverage) {
+            $soy = new Soy($beverage);
+            $this->assertEquals($expected, $soy->getDescription());
+        }
     }
 
     public function testCost()
     {
-        $beverageCost = 0.89;
-        $soyCost = 0.15;
-        $expected = $beverageCost + $soyCost;
-
+        $expected = HouseBlend::COST + SOY::COST;
         $beverage = $this->getMockBuilder(HouseBlend::class)->setMethods(['cost'])->getMock();
-        $beverage->expects($this->once())->method('cost')->will($this->returnValue($beverageCost));
+        $beverage->expects($this->once())->method('cost')->will($this->returnValue(HouseBlend::COST));
 
         if ($beverage instanceof AbstractBeverage) {
             $soy = new Soy($beverage);

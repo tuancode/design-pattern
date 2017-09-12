@@ -14,21 +14,21 @@ class WhipTest extends TestCase
 {
     public function testDescription()
     {
-        $expected = 'House Blend, Whip';
-        $beverage = $this->createMock(HouseBlend::class);
-        $whip = new Whip($beverage);
+        $expected = HouseBlend::DESCRIPTION.Whip::DESCRIPTION;
+        $beverage = $this->getMockBuilder(HouseBlend::class)->setMethods(['getDescription'])->getMock();
+        $beverage->expects($this->once())->method('getDescription')->will($this->returnValue(HouseBlend::DESCRIPTION));
 
-        $this->assertAttributeEquals($expected, 'description', $whip);
+        if ($beverage instanceof AbstractBeverage) {
+            $whip = new Whip($beverage);
+            $this->assertEquals($expected, $whip->getDescription());
+        }
     }
 
     public function testCost()
     {
-        $beverageCost = 0.89;
-        $whipCost = 0.10;
-        $expected = $beverageCost + $whipCost;
-
+        $expected = HouseBlend::COST + Whip::COST;
         $beverage = $this->getMockBuilder(HouseBlend::class)->setMethods(['cost'])->getMock();
-        $beverage->expects($this->once())->method('cost')->will($this->returnValue($beverageCost));
+        $beverage->expects($this->once())->method('cost')->will($this->returnValue(HouseBlend::COST));
 
         if ($beverage instanceof AbstractBeverage) {
             $whip = new Whip($beverage);

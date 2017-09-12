@@ -14,21 +14,21 @@ class MochaTest extends TestCase
 {
     public function testDescription()
     {
-        $expected = 'House Blend, Mocha';
-        $beverage = $this->createMock(HouseBlend::class);
-        $mocha = new Mocha($beverage);
+        $expected = HouseBlend::DESCRIPTION.Mocha::DESCRIPTION;
+        $beverage = $this->getMockBuilder(HouseBlend::class)->setMethods(['getDescription'])->getMock();
+        $beverage->expects($this->once())->method('getDescription')->will($this->returnValue(HouseBlend::DESCRIPTION));
 
-        $this->assertAttributeEquals($expected, 'description', $mocha);
+        if ($beverage instanceof AbstractBeverage) {
+            $mocha = new Mocha($beverage);
+            $this->assertEquals($expected, $mocha->getDescription());
+        }
     }
 
     public function testCost()
     {
-        $beverageCost = 0.89;
-        $mochaCost = 0.20;
-        $expected = $beverageCost + $mochaCost;
-
+        $expected = HouseBlend::COST + Mocha::COST;
         $beverage = $this->getMockBuilder(HouseBlend::class)->setMethods(['cost'])->getMock();
-        $beverage->expects($this->once())->method('cost')->will($this->returnValue($beverageCost));
+        $beverage->expects($this->once())->method('cost')->will($this->returnValue(HouseBlend::COST));
 
         if ($beverage instanceof AbstractBeverage) {
             $mocha = new Mocha($beverage);
